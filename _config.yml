@@ -101,7 +101,9 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+# 显示尺寸 112×112 且圆形裁剪，建议用正方形图（≥224px 高清屏才不糊）
+# 本地路径（以 / 开头）会自动带上 baseurl / cdn；http(s) 开头的链接则原样使用
+avatar: /assets/img/avatar.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
