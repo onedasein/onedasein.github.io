@@ -17,8 +17,8 @@
 ## 一、上线三步
 
 ```bash
-# 1. 填你自己的信息（用户名/显示名/邮箱，可选域名）
-bash tools/init-site.sh -u <你的GitHub用户名> -n "显示名" -e you@example.com
+# 1. 填你自己的信息（用户名 / 署名 / 邮箱，可选域名）
+bash tools/init-site.sh -u <你的GitHub用户名> -n "<你的名字>" -e you@example.com
 
 # 2. 推到 GitHub（仓库名必须是 <用户名>.github.io，否则见下面「项目站点」）
 git add -A && git commit -m "chore: init site"

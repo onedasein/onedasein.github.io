@@ -3,7 +3,7 @@
 # 一次性初始化：把仓库里的占位符替换成你的真实信息。
 #
 # 用法:
-#   bash tools/init-site.sh -u <GitHub用户名> [-n <显示名>] [-e <邮箱>] [-d <自定义域名>] [-r <项目站点仓库名>]
+#   bash tools/init-site.sh -u <GitHub用户名> [-n <署名>] [-e <邮箱>] [-d <自定义域名>] [-r <项目站点仓库名>]
 #
 # 例（用户站点，即仓库名 <用户名>.github.io）:
 #   bash tools/init-site.sh -u alice -n "爱丽丝" -e me@example.com
@@ -76,7 +76,7 @@ fi
 
 echo "✅ 已写入: $cfg / _tabs/about.md"
 echo "   GitHub 用户名 : $username"
-echo "   显示名        : $name"
+echo "   署名          : $name"
 if [ -n "$email" ]; then echo "   邮箱          : $email"; fi
 echo "   站点 URL      : $site_url"
 if [ -n "$repo" ]; then echo "   baseurl       : /$repo"; else echo "   baseurl       : （根路径，保持空）"; fi
