@@ -19,7 +19,7 @@ permalink: /roadmap/06-resources/
 | [MIT 6.824 / 6.5840](https://pdos.csail.mit.edu/6.824/) | A/B | 分布式系统，**性价比最高的课** |
 | [CMU 15-418](https://www.cs.cmu.edu/~418/) / UIUC ECE408 | B | 并行体系结构 |
 | [Karpathy Zero to Hero](https://karpathy.ai/zero-to-hero.html) | C/B | 从零实现 GPT |
-| [CS231n](http://cs231n.stanford.edu/) / [CS224n](https://web.stanford.edu/class/cs224n/) | C | 视觉 / NLP |
+| [CS231n](https://cs231n.stanford.edu/) / [CS224n](https://web.stanford.edu/class/cs224n/) | C | 视觉 / NLP |
 | [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | C/B | 线性代数 |
 
 ## 2. 书

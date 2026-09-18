@@ -85,7 +85,7 @@ L3/L4 是挣钱的（企业现在真正缺的是"能把 Agent 做稳定并评测
 
 ## 4. 资源
 
-- 课：[Karpathy Zero to Hero](https://karpathy.ai/zero-to-hero.html)｜[CS231n](http://cs231n.stanford.edu/)｜[CS224n](https://web.stanford.edu/class/cs224n/)
+- 课：[Karpathy Zero to Hero](https://karpathy.ai/zero-to-hero.html)｜[CS231n](https://cs231n.stanford.edu/)｜[CS224n](https://web.stanford.edu/class/cs224n/)
 - 书：《动手学深度学习》(d2l)｜《深度学习》花书（当参考，别通读）｜《Build a Large Language Model (From Scratch)》(Raschka)
 - 工具：PyTorch、HF transformers/trl/peft、LLaMA-Factory、[nanoGPT](https://github.com/karpathy/nanoGPT)、vLLM、LangGraph
 - 论文：Attention Is All You Need → GPT-3 → InstructGPT → LoRA → DPO → ReAct → Toolformer → RAG 相关
