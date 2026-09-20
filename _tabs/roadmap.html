@@ -1,0 +1,183 @@
+---
+layout: page
+title: "Roadmap"
+permalink: /roadmap/
+icon: fas fa-road
+order: 5
+---
+
+<link rel="stylesheet" href="/assets/css/roadmap.css">
+
+{% raw %}
+
+<div class="rd-content">
+
+<div class="rd-banner"><strong>PDF 版</strong>：<a href="/assets/roadmap/cs-roadmap.pdf">下载《CS 成长路线图》PDF</a> —— A4、含封面与目录，适合打印与离线阅读。</div>
+    <div class="rd-note">起点：2026-09（大二上，约 2029 届毕业）｜时间：每周几乎全部可自由实践 目标：三个方向——① 后端/基础架构 ② AI Infra/高性能计算 ③ 机器学习/Agent，并补齐 CSAPP 等系统基础。</div>
+    <h2 id="0-一句话策略"><span class="me-2">0. 一句话策略</span><a href="#0-一句话策略" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p><strong>大二上半年的任务不是「选方向」，而是「用作品收集证据」。</strong> 三个方向共用一条系统底座（C → CSAPP → OS/网络/并发），所以先修底座不会浪费； 方向用一个 6 周的「轮转公测」来决定，用评分表决定，不用感觉决定。</p>
+    <pre><code>                        ┌──→ ① 后端 · 基础架构
+C / CSAPP / OS / 网络 ──┤
+        并发 / 存储     └──→ ② AI Infra · HPC（= 系统功底 ∩ ML）
+                                   ↑
+        数学 + 动手训练 ────────────┘
+                    └──→ ③ ML / Agent（应用层，可随时切入）</code></pre>
+    <p><strong>三条铁律</strong></p>
+    <ol>
+      <li>任何时刻只有 <strong>1 条主线 + 1 条副线</strong>，外加每天 30 分钟底座。</li>
+      <li>里程碑必须是<strong>可运行的产出</strong>（repo + benchmark + writeup），不是「看完某课程」。</li>
+      <li><strong>实习是唯一的硬 deadline</strong>，所有规划倒推自它（见下表）。</li>
+    </ol>
+    <h2 id="1-硬性时间锚点倒推规划"><span class="me-2">1. 硬性时间锚点（倒推规划）</span><a href="#1-硬性时间锚点倒推规划" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>时间</th>
+          <th>学期</th>
+          <th>唯一关键目标</th>
+          <th>验收</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026.9 – 2027.1</td>
+          <td>大二上</td>
+          <td>底座 + 三个方向轮转探针</td>
+          <td>C+CSAPP 4 个 lab、epoll server、3 个探针 repo</td>
+        </tr>
+        <tr>
+          <td>2027.2 – 2027.7</td>
+          <td>大二下</td>
+          <td><strong>定主攻方向</strong> + 第一个像样的项目 + 投第一份日常实习</td>
+          <td>决策备忘、一个可讲的项目、面试能过简历关</td>
+        </tr>
+        <tr>
+          <td>2027.9 – 2028.1</td>
+          <td>大三上</td>
+          <td>主攻方向深挖 + <strong>大厂日常实习</strong></td>
+          <td>第二/第三个项目、一段实习经历</td>
+        </tr>
+        <tr>
+          <td>2027.12 – 2028.4</td>
+          <td>—</td>
+          <td><strong>2028 暑期实习投递</strong>（最重要的一次，有转正通道）</td>
+          <td>拿到 offer</td>
+        </tr>
+        <tr>
+          <td>2028.7 – 2028.9</td>
+          <td>大三暑假</td>
+          <td>暑期实习，争取转正（return offer）</td>
+          <td>转正 or 一份大厂背书</td>
+        </tr>
+        <tr>
+          <td>2028.8 – 2028.11</td>
+          <td>大四上</td>
+          <td>2029 届秋招</td>
+          <td>上岸</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rd-note">时间充裕的人最容易犯的错：把「准备」无限期延长到秋招前。<strong>从大二下开始就投简历</strong>，用面试反馈校准学习方向，比闭门造车快 10 倍。</div>
+    <h2 id="2-文档地图"><span class="me-2">2. 文档地图</span><a href="#2-文档地图" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>文件</th>
+          <th>内容</th>
+          <th>什么时候看</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/roadmap/00-direction/">00 方向选择与轮转公测</a></td>
+          <td><strong>先读这个</strong>：三个探针项目 + 评分表 + 决策规则</td>
+          <td>现在</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/01-foundation/">01 共同底座-CSAPP与系统</a></td>
+          <td>C、CSAPP 读法与 lab、OSTEP、CS144、15-445、6.824</td>
+          <td>现在，持续 12 个月</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/02-backend/">02 主线A-后端与基础架构</a></td>
+          <td>后端方向的技能阶梯与项目</td>
+          <td>探针期 / 定方向后</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/03-ai-infra/">03 主线B-AI-Infra与HPC</a></td>
+          <td>CUDA/Triton、分布式训练、推理系统</td>
+          <td>探针期 / 定方向后</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/04-ml-agent/">04 主线C-机器学习与Agent</a></td>
+          <td>从零训练、对齐、Agent 系统与评测</td>
+          <td>探针期 / 定方向后</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/05-plan/">05 周计划与里程碑</a></td>
+          <td>分学期目标、每周节奏模板、验收 gate</td>
+          <td>每学期初</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/06-resources/">06 资源与避坑</a></td>
+          <td>书/课/源码/工具清单 + 12 条避坑</td>
+          <td>随时查</td>
+        </tr>
+        <tr>
+          <td><a href="/roadmap/progress/">progress</a></td>
+          <td>可勾选进度表</td>
+          <td>每周五更新</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="3-每周节奏模板时间充裕版约-2530h"><span class="me-2">3. 每周节奏模板（时间充裕版，约 25–30h）</span><a href="#3-每周节奏模板时间充裕版约-2530h" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>时段</th>
+          <th>内容</th>
+          <th>小时</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>每天固定 0.5h</td>
+          <td>底座：CSAPP 精读 / 算法题 / 英语技术文档</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>主线（大块时间 ×3–4 次）</td>
+          <td>写代码、啃 lab、调性能</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>副线（大块时间 ×1–2 次）</td>
+          <td>另一方向的探索性学习</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>周五</td>
+          <td>写 writeup（500–1500 字）+ 更新 progress.md + 推 commit</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>周日</td>
+          <td>复盘：本周卡点、下周计划（写进文件，不要放脑子里）</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>每周必须留下三样东西</strong>：≥5 个 commit、1 篇 writeup、1 个可运行的新东西。 这是「时间充裕」唯一不会翻车的使用方式。</p>
+    <h2 id="4-关于三个方向不知道选哪个"><span class="me-2">4. 关于「三个方向不知道选哪个」</span><a href="#4-关于三个方向不知道选哪个" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p>这是<strong>正常的、甚至是正确</strong>的状态——大二不该凭想象押注。请直接去读 <a href="/roadmap/00-direction/">00 方向选择与轮转公测</a>， 用 6 周、三个 30–50 小时的小项目，把「喜欢」变成数据。三个方向的技能在系统层高度重叠， 所以这段时间即使最后转向，投入也不会作废。</p>
+    <p><strong>额外的现实信息</strong>（可能影响你的选择）：</p>
+    <ul>
+      <li><strong>① 后端/基础架构</strong>：岗位量最大、最稳，天花板高（存储/数据库/分布式中间件），但纯 CRUD 岗正在被压缩，要做就做「造轮子」的那一侧。</li>
+      <li><strong>② AI Infra/HPC</strong>：当前最稀缺、溢价最高，门槛也最高（要真会 C/CUDA 和体系结构），本科生能拿出手的人极少。</li>
+      <li><strong>③ ML/Agent</strong>：岗位多但竞争最卷，且<strong>纯应用层容易被上层框架变化清洗</strong>；真正抗跌的是「能把模型训出来/训得快/评测得住」的人。</li>
+      <li>三者不是互斥：<strong>②=①+ML</strong>，现实岗位多是组合（如「推理引擎工程师」「训练框架工程师」「Agent 平台工程师」）。 最稳的路径是 <strong>A（打底）→ B（差异化）</strong>，C 作为随时可切入的副线。</li>
+    </ul>
+
+</div>
+
+{% endraw %}

@@ -35,4 +35,4 @@ assets/js/dist
 Thumbs.db
 
 # Typst 构建中间产物
-_typst/roadmap/out
+_typst/roadmap/.build

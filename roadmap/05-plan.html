@@ -1,0 +1,266 @@
+---
+layout: page
+title: "周计划与里程碑（大二上 → 秋招）"
+permalink: /roadmap/05-plan/
+---
+
+<link rel="stylesheet" href="/assets/css/roadmap.css">
+
+{% raw %}
+
+<div class="rd-content">
+
+<div class="rd-note">起点 2026.9（大二上）｜毕业约 2029.6 用法：每学期开学读一次，把当学期的表格抄进 <code>progress.md</code>；每周五花 1 小时更新进度。 <strong>Gate 的含义</strong>：不通过 gate 不进入下一学期的大目标。宁可降标准，不可不验收。</div>
+    <h2 id="学期总览"><span class="me-2">学期总览</span><a href="#学期总览" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>学期</th>
+          <th>时间</th>
+          <th>主题</th>
+          <th>期末 Gate（硬性验收）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>大二上</td>
+          <td>2026.9–2027.1</td>
+          <td><strong>底座 + 方向轮转</strong></td>
+          <td>C 项目 1 个；CSAPP lab ≥3 个；三个探针 repo；决策备忘</td>
+        </tr>
+        <tr>
+          <td>寒假</td>
+          <td>2027.1–2</td>
+          <td>集中突破</td>
+          <td>CS144 完成；Go 上手</td>
+        </tr>
+        <tr>
+          <td>大二下</td>
+          <td>2027.2–2027.7</td>
+          <td><strong>定主攻 + 第一个像样项目</strong></td>
+          <td>6.824 Lab1-2 完成；主攻方向项目 v0.1；<strong>投出第一份日常实习</strong></td>
+        </tr>
+        <tr>
+          <td>暑假</td>
+          <td>2027.7–9</td>
+          <td>项目深挖 / 实习</td>
+          <td>项目 v1.0（带 benchmark 与 writeup）</td>
+        </tr>
+        <tr>
+          <td>大三上</td>
+          <td>2027.9–2028.1</td>
+          <td><strong>大厂日常实习 + 深度</strong></td>
+          <td>一段实习经历；6.824 Lab3-4 完成；<strong>12 月起投暑期实习</strong></td>
+        </tr>
+        <tr>
+          <td>大三下</td>
+          <td>2028.2–2028.7</td>
+          <td><strong>暑期实习冲刺</strong></td>
+          <td>拿到暑期实习 offer；面试复盘 ≥10 场</td>
+        </tr>
+        <tr>
+          <td>大三暑假</td>
+          <td>2028.7–9</td>
+          <td>实习转正</td>
+          <td>return offer 或强背书</td>
+        </tr>
+        <tr>
+          <td>大四上</td>
+          <td>2028.8–2029.1</td>
+          <td><strong>秋招</strong></td>
+          <td>上岸</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="大二上20269--20271详细计划"><span class="me-2">大二上（2026.9 – 2027.1）详细计划</span><a href="#大二上20269--20271详细计划" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p><strong>总时长</strong>：约 18 周 × 25h ≈ 450h｜<strong>分配</strong>：底座 40% / 轮转探针 45% / 输出与复盘 15%</p>
+    <table>
+      <thead>
+        <tr>
+          <th>周</th>
+          <th>主线任务</th>
+          <th>底座</th>
+          <th>交付物</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1–2</td>
+          <td>环境搭建（Linux、gcc/gdb、git、Makefile、CMake）；C 语言第 1–5 阶段</td>
+          <td>CSAPP 第 1–2 章</td>
+          <td>一份「我的开发环境」笔记</td>
+        </tr>
+        <tr>
+          <td>3–4</td>
+          <td><strong>探针 A</strong>：C 写 epoll HTTP 服务器</td>
+          <td>CSAPP 第 3 章 + Bomb Lab</td>
+          <td>探针 A repo（含压测）</td>
+        </tr>
+        <tr>
+          <td>5–6</td>
+          <td>探针 A 优化 + <strong>Data Lab / Cache Lab</strong></td>
+          <td>CSAPP 第 6 章</td>
+          <td>优化对比报告</td>
+        </tr>
+        <tr>
+          <td>7–8</td>
+          <td><strong>探针 B</strong>：CUDA reduce + sgemm + ncu 分析</td>
+          <td>CSAPP 第 5 章</td>
+          <td>探针 B repo + Roofline 图</td>
+        </tr>
+        <tr>
+          <td>9–10</td>
+          <td>探针 B 续：Triton fused LayerNorm；<strong>Malloc Lab</strong></td>
+          <td>CSAPP 第 9 章</td>
+          <td>探针 B 报告</td>
+        </tr>
+        <tr>
+          <td>11–12</td>
+          <td><strong>探针 C</strong>：nanoGPT 复现 + 手写反向传播</td>
+          <td>线代补课</td>
+          <td>探针 C repo + loss 曲线</td>
+        </tr>
+        <tr>
+          <td>13–14</td>
+          <td>探针 C 续：mini agent + 自建 eval；<strong>Shell Lab</strong></td>
+          <td>CSAPP 第 8 章</td>
+          <td>探针 C eval 报告</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td><strong>填评分表 + 写 500 字决策备忘</strong></td>
+          <td>—</td>
+          <td><strong>决策文档</strong>（本目录内）</td>
+        </tr>
+        <tr>
+          <td>16–17</td>
+          <td>选定方向的第一个小项目起步；补 <code>Proxy Lab</code> 或 <code>Attack Lab</code></td>
+          <td>CSAPP 第 10/12 章</td>
+          <td>项目骨架</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>期末复盘：更新本目录、写学期总结</td>
+          <td>—</td>
+          <td>学期总结 writeup</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>期末 Gate 自检</strong></p>
+    <ul>
+      <li><span class="rd-todo">☐ 3 个探针 repo 全部公开，每个都有 README + 数据</span></li>
+      <li><span class="rd-todo">☐ CSAPP lab 完成 ≥3 个（建议：Bomb / Cache / Malloc）</span></li>
+      <li><span class="rd-todo">☐ 决策备忘已写，主攻方向已有数据支撑</span></li>
+      <li><span class="rd-todo">☐ GitHub 连续提交 ≥15 周，writeup ≥12 篇</span></li>
+    </ul>
+    <h2 id="大二下20272--20277详细计划"><span class="me-2">大二下（2027.2 – 2027.7）详细计划</span><a href="#大二下20272--20277详细计划" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p><strong>主题</strong>：把「会做题」变成「能交付系统」，并且<strong>第一次进入市场</strong>。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>月</th>
+          <th>任务</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2</td>
+          <td>收尾 CS144 的 TCP 实现；Go 语言 2 周速成（写一个小服务）</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>6.824 Lab 1（MapReduce）+ Lab 2（Raft）起步；<strong>开始投日常实习（小厂/中厂）</strong></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Raft 完成（含快照）；主攻方向项目 v0.1</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6.824 Lab 3（KV）；项目加可观测性 / 评测</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>项目 v1.0 + 压测/消融报告 + writeup</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>面试复盘（≥5 场）；补齐被问倒的知识点；暑假计划</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>期末 Gate</strong></p>
+    <ul>
+      <li><span class="rd-todo">☐ 6.824 Lab 1–2 通过（Lab 3 加分）</span></li>
+      <li><span class="rd-todo">☐ 主攻方向有一个能讲 20 分钟的项目，含数据</span></li>
+      <li><span class="rd-todo">☐ 投递 ≥20 家，拿到 ≥3 场面试（<strong>哪怕全挂也是成功</strong>——你要的是反馈）</span></li>
+      <li><span class="rd-todo">☐ 能回答 02 / 03 / 04 里对应方向的自测清单 ≥70%</span></li>
+    </ul>
+    <h2 id="大三上20279--20281最关键的一学期"><span class="me-2">大三上（2027.9 – 2028.1）：最关键的一学期</span><a href="#大三上20279--20281最关键的一学期" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p><strong>两件事并行</strong>：① 日常实习（争取大厂）；② <strong>12 月起投 2028 暑期实习</strong>（有转正通道，最重要的一次投递）。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>月</th>
+          <th>任务</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9</td>
+          <td>6.824 Lab 3–4；简历重构（一页、项目数据化、STAR）</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>投大厂日常实习（基础架构/中间件/AI Infra/算法工程）；面试</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>进入实习或继续面试；实习中主动承担「性能/故障」类任务</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><strong>暑期实习投递开启</strong>（阿里/字节/腾讯/美团/华为等），笔试 + 面试</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>面试复盘；寒假集中补短板（按面试反馈，不按学习计划）</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Gate</strong></p>
+    <ul>
+      <li><span class="rd-todo">☐ 6.824 全 lab 完成（本方向最强背书之一）</span></li>
+      <li><span class="rd-todo">☐ 有一段实习经历（日常实习即可）</span></li>
+      <li><span class="rd-todo">☐ 暑期实习投递 ≥15 家，进入流程 ≥3 家</span></li>
+    </ul>
+    <h2 id="大三下--秋招20282--20291"><span class="me-2">大三下 → 秋招（2028.2 – 2029.1）</span><a href="#大三下--秋招20282--20291" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><strong>2028.2–4</strong>：暑期实习面试高峰；每场面试后 24h 内写复盘（问了什么、答砸了什么、下周补什么）。</li>
+      <li><strong>2028.7–9</strong>：暑期实习，目标拿 return offer；没转正也有大厂背书 + 真实系统经验。</li>
+      <li><strong>2028.8–11</strong>：秋招。此时你的简历应该是：<strong>1–2 段实习 + 2–3 个带数据的硬核项目 + 6.824/CSAPP 底座</strong>。</li>
+      <li><strong>2029.1</strong>：补录/春招兜底。</li>
+    </ul>
+    <h2 id="每周执行模板"><span class="me-2">每周执行模板</span><a href="#每周执行模板" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <pre><code>周一–周五  每天 30–60min 底座（CSAPP/lab/算法题）
+           每天 2–3h 主线（大块时间优先给"要动手写"的任务）
+周六       4–6h 副线（另一个方向的探索）
+周日       2h 复盘 + 写 writeup + 更新 progress.md + 推 commit</code></pre>
+    <p><strong>周检查（周日问自己）</strong></p>
+    <ol>
+      <li>这周有 commit 吗？≥5 个？</li>
+      <li>有一样新东西能跑起来吗？</li>
+      <li>卡住的点写下来了吗？下周第一个动作是什么？</li>
+      <li>有没有「假装学习」（看视频/读文章超过 40% 的时间）？→ 立刻调回动手。</li>
+    </ol>
+    <h2 id="调整规则现实会打乱计划"><span class="me-2">调整规则（现实会打乱计划）</span><a href="#调整规则现实会打乱计划" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><strong>某阶段超时 ≤2 周</strong>：正常，顺延，不砍 gate。</li>
+      <li><strong>超时 >4 周</strong>：说明任务定太大，把 milestone 砍一半（<strong>砍范围，不砍验收标准</strong>）。</li>
+      <li><strong>拿到实习/面试反馈</strong>：以反馈为准，<strong>立刻重排优先级</strong>——面试问什么就补什么，这是最高效的学习信号。</li>
+      <li><strong>对方向产生怀疑</strong>：允许在学期末重新评估一次，但必须用新的数据（新项目/实习体验），不许凭情绪横跳。</li>
+    </ul>
+
+</div>
+
+{% endraw %}

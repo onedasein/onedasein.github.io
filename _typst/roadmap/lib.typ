@@ -1,20 +1,24 @@
 // ============================================================
-//  lib.typ —— 《CS 成长路线图》PDF 版式定义
+//  lib.typ —— 《CS 成长路线图》版式（双目标：PDF / HTML）
 //
-//  用法（主文件 main.typ）：
-//      #import "lib.typ": *
-//      #show: roadmap-doc
-//      #include "preface.typ"
-//      #include "00-direction.typ"
-//      ...
+//  同一批章节文件（preface.typ、00-direction.typ … 07-progress.typ）
+//  同时供两个目标使用，目标由 CLI 输入决定：
 //
-//  章节文件只写内容，不写版式：`= 标题` / `== 小节` / `=== 子节`。
-//  常用构件： #note[...]（提示框）、#tbl(列宽, 表头..., 单元格...)（表格）、
-//            #todo[...] / #done[...]（勾选框）、#no[...]（✗ 反例）、
-//            #emph-key[...]（中文也可视的加粗强调）。
+//    PDF ： typst compile main.typ out/roadmap.pdf
+//    HTML： typst compile --features html --format html \
+//              --input target=html web/<slug>.typ out/<slug>.html
+//
+//  章节文件里只写内容与构件（签名两目标通用）：
+//    #note[…]  提示框          #tbl(列宽, 表头…, 数据…)  表格
+//    #todo[…] / #done[…]      勾选框
+//    #no[…]   ✗ 反例           #xref("04-ml-agent", "主线 C")  跨章引用
+//    #pdf-banner()            网页版才显示的 PDF 下载条
 // ============================================================
 
-// ---- 配色 ----
+#let target = sys.inputs.at("target", default: "paged")
+#let is-html = target == "html"
+
+// ---- 配色（PDF 用；网页版由 assets/css/roadmap.css 承担）----
 #let accent = rgb("#1b4f72")      // 主色：深蓝
 #let accent-2 = rgb("#2e86c1")    // 副色：亮蓝
 #let soft = rgb("#eef4fa")        // 提示框底色
@@ -22,44 +26,103 @@
 #let muted = rgb("#6b7684")       // 次要文字
 #let warn = rgb("#b3261e")        // 强调/警示
 
-// ---- 行内构件 ----
-// 勾选框（对应 Markdown 的 - [ ] / - [x]）
-#let todo(body) = box[#text(fill: muted)[☐] #body]
-#let done(body) = box[#text(fill: accent)[☑] #body]
-// 反例行（对应 Markdown 里以 ❌ 开头的条目；U+274C 本机无字体覆盖，改用 ✗）
-#let no(body) = [#text(fill: warn, weight: "bold")[✗]#h(0.35em)#body]
+// ---- 网页版章节 URL（与 tools/build-roadmap.sh 的映射表保持一致）----
+#let web-urls = (
+  preface: "/roadmap/",
+  "00-direction": "/roadmap/00-direction/",
+  "01-foundation": "/roadmap/01-foundation/",
+  "02-backend": "/roadmap/02-backend/",
+  "03-ai-infra": "/roadmap/03-ai-infra/",
+  "04-ml-agent": "/roadmap/04-ml-agent/",
+  "05-plan": "/roadmap/05-plan/",
+  "06-resources": "/roadmap/06-resources/",
+  "07-progress": "/roadmap/progress/",
+)
+
+// ============================================================
+//  构件（两目标同签名）
+// ============================================================
+
+// 跨章引用：网页版是真链接，PDF 版是纯文字（同一份文档内不需要链接）
+#let xref(slug, label) = if is-html {
+  html.elem("a", attrs: (href: web-urls.at(slug)), label)
+} else {
+  label
+}
+
+// 网页版顶部的 PDF 下载条（PDF 版不显示）
+#let pdf-banner() = if is-html {
+  html.elem("div", attrs: (class: "rd-banner"), [
+    *PDF 版*：#link("/assets/roadmap/cs-roadmap.pdf")[下载《CS 成长路线图》PDF]
+    —— A4、含封面与目录，适合打印与离线阅读。
+  ])
+} else {
+  []
+}
 
 // 提示框（对应 Markdown 的 > 引用块）
-#let note(body) = block(
-  width: 100%,
-  inset: (left: 11pt, right: 10pt, top: 7pt, bottom: 7pt),
-  radius: 2pt,
-  fill: soft,
-  stroke: (left: 3pt + accent-2, rest: none),
-)[#body]
+#let note(body) = if is-html {
+  html.elem("div", attrs: (class: "rd-note"), body)
+} else {
+  block(
+    width: 100%,
+    inset: (left: 11pt, right: 10pt, top: 7pt, bottom: 7pt),
+    radius: 2pt,
+    fill: soft,
+    stroke: (left: 3pt + accent-2, rest: none),
+  )[#body]
+}
 
-// 表格：第一行视为表头。用法 #tbl((auto, 1fr, 1fr), [表头1], [表头2], [表头3], [a], [b], [c], ...)
+// 勾选框（对应 Markdown 的 - [ ] / - [x]）
+#let todo(body) = if is-html {
+  html.elem("span", attrs: (class: "rd-todo"), [☐ #body])
+} else {
+  box[#text(fill: muted)[☐] #body]
+}
+#let done(body) = if is-html {
+  html.elem("span", attrs: (class: "rd-done"), [☑ #body])
+} else {
+  box[#text(fill: accent)[☑] #body]
+}
+
+// 反例条目（对应 Markdown 里以 ❌ 开头的条目；U+274C 本机无字体覆盖，改用 ✗）
+#let no(body) = if is-html {
+  html.elem("span", attrs: (class: "rd-no"), [
+    #html.elem("span", attrs: (class: "rd-mark"), [✗]) #body
+  ])
+} else {
+  [#text(fill: warn, weight: "bold")[✗]#h(0.35em)#body]
+}
+
+// 表格：第一行视为表头。用法 #tbl((auto, 1fr, 1fr), [表头1], [表头2], [表头3], [a], [b], [c], …)
 #let tbl(cols, ..cells) = {
   let n = cols.len()
   let cs = cells.pos()
-  set text(size: 9pt)
-  table(
-    columns: cols,
-    inset: (x: 6pt, y: 4.5pt),
-    align: left + top,
-    fill: (x, y) => if y == 0 { luma(236) } else if calc.odd(y) { luma(250) } else { white },
-    stroke: (x, y) => (
-      bottom: if y == 0 { 0.8pt + luma(130) } else { 0.3pt + luma(205) },
-    ),
-    table.header(..cs.slice(0, n)),
-    ..cs.slice(n),
-  )
+  if is-html {
+    table(columns: n, table.header(..cs.slice(0, n)), ..cs.slice(n))
+  } else {
+    set text(size: 9pt)
+    table(
+      columns: cols,
+      inset: (x: 6pt, y: 4.5pt),
+      align: left + top,
+      fill: (x, y) => if y == 0 { luma(236) } else if calc.odd(y) { luma(250) } else { white },
+      stroke: (x, y) => (
+        bottom: if y == 0 { 0.8pt + luma(130) } else { 0.3pt + luma(205) },
+      ),
+      table.header(..cs.slice(0, n)),
+      ..cs.slice(n),
+    )
+  }
 }
 
-// ---- 章节标题状态（供页眉显示当前章名）----
-#let chap-state = state("chap", "")
+// ============================================================
+//  PDF 模板（封面、页眉页脚、标题样式都在这里）
+// ============================================================
 
-// ---- 文档模板 ----
+// 章节标题状态（供页眉显示当前章名）
+#let chap-state = if is-html { none } else { state("chap", "") }
+
 #let roadmap-doc(
   title: "CS 成长路线图",
   body,
@@ -133,5 +196,15 @@
     #text(size: 11.4pt, weight: "bold", fill: ink, stroke: 0.18pt)[#it.body]
   ]
 
+  body
+}
+
+// ============================================================
+//  HTML 模板：只做最少的语义化处理，样式交给 assets/css/roadmap.css
+//  （章标题由 Jekyll 页面的 title 承担，所以这里丢掉一级标题）
+// ============================================================
+#let roadmap-web(body) = {
+  set text(lang: "zh")
+  show heading.where(level: 1): it => []
   body
 }

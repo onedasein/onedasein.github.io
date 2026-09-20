@@ -1,0 +1,220 @@
+---
+layout: page
+title: "资源清单与避坑"
+permalink: /roadmap/06-resources/
+---
+
+<link rel="stylesheet" href="/assets/css/roadmap.css">
+
+{% raw %}
+
+<div class="rd-content">
+
+<h2 id="1-课程免费公开质量高"><span class="me-2">1. 课程（免费、公开、质量高）</span><a href="#1-课程免费公开质量高" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>课程</th>
+          <th>方向</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://csapp.cs.cmu.edu/">CSAPP</a></td>
+          <td>全部</td>
+          <td>系统底座核心，务必做 lab</td>
+        </tr>
+        <tr>
+          <td><a href="https://pdos.csail.mit.edu/6.S081/2021/">MIT 6.S081</a></td>
+          <td>A/B</td>
+          <td>xv6 操作系统 lab</td>
+        </tr>
+        <tr>
+          <td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">OSTEP</a></td>
+          <td>A/B</td>
+          <td>免费操作系统书</td>
+        </tr>
+        <tr>
+          <td><a href="https://cs144.github.io/">CS144</a></td>
+          <td>A/B</td>
+          <td>自己实现 TCP</td>
+        </tr>
+        <tr>
+          <td><a href="https://15445.courses.cs.cmu.edu/">CMU 15-445</a></td>
+          <td>A</td>
+          <td>数据库系统</td>
+        </tr>
+        <tr>
+          <td><a href="https://pdos.csail.mit.edu/6.824/">MIT 6.824 / 6.5840</a></td>
+          <td>A/B</td>
+          <td>分布式系统，<strong>性价比最高的课</strong></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.cs.cmu.edu/~418/">CMU 15-418</a> / UIUC ECE408</td>
+          <td>B</td>
+          <td>并行体系结构</td>
+        </tr>
+        <tr>
+          <td><a href="https://karpathy.ai/zero-to-hero.html">Karpathy Zero to Hero</a></td>
+          <td>C/B</td>
+          <td>从零实现 GPT</td>
+        </tr>
+        <tr>
+          <td><a href="https://cs231n.stanford.edu/">CS231n</a> / <a href="https://web.stanford.edu/class/cs224n/">CS224n</a></td>
+          <td>C</td>
+          <td>视觉 / NLP</td>
+        </tr>
+        <tr>
+          <td><a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/">MIT 18.06</a></td>
+          <td>C/B</td>
+          <td>线性代数</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="2-书"><span class="me-2">2. 书</span><a href="#2-书" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>书</th>
+          <th>方向</th>
+          <th>读法</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>《深入理解计算机系统》CSAPP</td>
+          <td>全部</td>
+          <td>配 lab，别通读</td>
+        </tr>
+        <tr>
+          <td>《操作系统导论》OSTEP</td>
+          <td>A/B</td>
+          <td>选读四大块</td>
+        </tr>
+        <tr>
+          <td>《数据密集型应用系统设计》DDIA</td>
+          <td>A</td>
+          <td>读两遍（做 lab 前后各一遍）</td>
+        </tr>
+        <tr>
+          <td>《UNIX 网络编程 卷1》</td>
+          <td>A/B</td>
+          <td>选读 IO 模型章节</td>
+        </tr>
+        <tr>
+          <td>《Linux 高性能服务器编程》</td>
+          <td>A</td>
+          <td>国内面试友好</td>
+        </tr>
+        <tr>
+          <td>《Programming Massively Parallel Processors》</td>
+          <td>B</td>
+          <td>CUDA 圣经</td>
+        </tr>
+        <tr>
+          <td>《计算机体系结构：量化研究方法》</td>
+          <td>B</td>
+          <td>选章</td>
+        </tr>
+        <tr>
+          <td>《动手学深度学习》d2l</td>
+          <td>C</td>
+          <td>边做边读</td>
+        </tr>
+        <tr>
+          <td>《Build a Large Language Model (From Scratch)》</td>
+          <td>C</td>
+          <td>手写 GPT，极佳</td>
+        </tr>
+        <tr>
+          <td>《SRE Google 运维解密》</td>
+          <td>A</td>
+          <td>建立工程与可靠性思维</td>
+        </tr>
+        <tr>
+          <td>《C 陷阱与缺陷》/《Effective C++》/《Go 语言圣经》</td>
+          <td>语言</td>
+          <td>按语言选</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="3-必读源码按难度递增别跳级"><span class="me-2">3. 必读源码（按难度递增，别跳级）</span><a href="#3-必读源码按难度递增别跳级" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <pre><code>Redis（万行级，入门首选）
+  → LevelDB / RocksDB（LSM）
+  → etcd（Go + Raft，工程典范）
+  → Envoy（C++，工程复杂度天花板）
+
+nanoGPT（几百行，读得完）
+  → vLLM（推理系统）
+  → PyTorch（框架，按需读算子层）
+  → FlashAttention（kernel 工程）</code></pre>
+    <h2 id="4-工具箱越早熟练越好"><span class="me-2">4. 工具箱（越早熟练越好）</span><a href="#4-工具箱越早熟练越好" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>类别</th>
+          <th>工具</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>调试</td>
+          <td>gdb / lldb、<code>rr</code>、ASan/TSan/UBSan、valgrind</td>
+        </tr>
+        <tr>
+          <td>性能</td>
+          <td><code>perf</code> + 火焰图、<code>strace</code>、<code>ltrace</code>、<code>bpftrace</code>、<code>ncu</code>/<code>nsys</code></td>
+        </tr>
+        <tr>
+          <td>网络</td>
+          <td>tcpdump、Wireshark、<code>ss</code>、<code>tc netem</code>（故障注入）</td>
+        </tr>
+        <tr>
+          <td>压测</td>
+          <td>wrk、vegeta、fio、locust</td>
+        </tr>
+        <tr>
+          <td>构建</td>
+          <td>Makefile、CMake、Bazel（了解）</td>
+        </tr>
+        <tr>
+          <td>环境</td>
+          <td>Docker、K8s（kind/minikube 起步）、WSL2</td>
+        </tr>
+        <tr>
+          <td>可观测</td>
+          <td>Prometheus、Grafana、OpenTelemetry</td>
+        </tr>
+        <tr>
+          <td>ML</td>
+          <td>PyTorch、HF transformers/trl/peft、vLLM、Triton、W&amp;B/TensorBoard</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="5-避坑清单12-条"><span class="me-2">5. 避坑清单（12 条）</span><a href="#5-避坑清单12-条" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ol>
+      <li><strong>把「看完课程」当成就。</strong> 唯一算数的是能跑的东西。看视频时间占比超过 40% 就该警觉。</li>
+      <li><strong>平摊三个方向。</strong> 任何时刻 1 主线 + 1 副线，多线同时开 = 全线停在教程第 3 章。</li>
+      <li><strong>把 CSAPP 当先修课线性读完。</strong> 它是字典 + lab 集合，不是小说。</li>
+      <li><strong>抄 lab 答案。</strong> 你删掉的正是唯一有价值的部分（卡住 3 小时后的顿悟）。</li>
+      <li><strong>只做 Python。</strong> 系统方向的第一道门槛就是 C；不会 C 的 AI Infra 是伪命题。</li>
+      <li><strong>追框架不追原理。</strong> LangChain 半年一换，Raft 和 Roofline 十年不变。</li>
+      <li><strong>没有 benchmark 就说「我优化了」。</strong> 任何性能/效果结论都必须有前后数据。</li>
+      <li><strong>不做 writeup。</strong> 写不出来 = 没真懂；而且面试讲的正是 writeup 的内容。</li>
+      <li><strong>把项目留在本地。</strong> 不上 GitHub、不写 README 的项目，在简历上等于不存在。</li>
+      <li><strong>推迟接触市场。</strong> 大二下就该投简历。面试反馈是最高效的学习信号，闭门造车会走两年弯路。</li>
+      <li><strong>一直在「准备」岗位需要的技术，却不看 JD。</strong> 每月爬 20 份目标岗位 JD，用词频决定学什么。</li>
+      <li><strong>用学习逃避交付 / 用交付逃避基础。</strong> 两者都要有，比例约 3:1（动手:读书）。</li>
+    </ol>
+    <h2 id="6-每月例行写进日历"><span class="me-2">6. 每月例行（写进日历）</span><a href="#6-每月例行写进日历" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><span class="rd-todo">☐ 爬取 20 份目标岗位 JD，统计技能词频 → 调整下月优先级</span></li>
+      <li><span class="rd-todo">☐ 更新 GitHub Profile README（项目列表 + 数据）</span></li>
+      <li><span class="rd-todo">☐ 读 1 篇论文并写拆解（方向 B/C 必做）</span></li>
+      <li><span class="rd-todo">☐ 复盘上月：时间去哪了？（真实计时，不靠感觉）</span></li>
+    </ul>
+
+</div>
+
+{% endraw %}

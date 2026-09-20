@@ -1,0 +1,168 @@
+---
+layout: page
+title: "进度追踪"
+permalink: /roadmap/progress/
+---
+
+<link rel="stylesheet" href="/assets/css/roadmap.css">
+
+{% raw %}
+
+<div class="rd-content">
+
+<div class="rd-note">规则：<strong>每周日更新</strong>。勾选只认「有 commit / 有产出」。不许勾「看完了」。 状态标记：<code>[ ]</code> 未开始 ｜ <code>[~]</code> 进行中 ｜ <code>[x]</code> 完成（附链接/日期）</div>
+    <p><strong>当前学期</strong>：大二上（2026.9 – 2027.1） <strong>当前主线</strong>：未定（轮转公测中） <strong>当前副线</strong>：— <strong>上次复盘日期</strong>：2026-09-18</p>
+    <h2 id="0-每周记录每周一行"><span class="me-2">0. 每周记录（每周一行）</span><a href="#0-每周记录每周一行" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>周</th>
+          <th>日期</th>
+          <th>主要产出</th>
+          <th>commits</th>
+          <th>writeup</th>
+          <th>卡点</th>
+          <th>下周第一动作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="1-大二上--底座"><span class="me-2">1. 大二上 · 底座</span><a href="#1-大二上--底座" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><span class="rd-todo">☐ 开发环境搭建（Linux / gcc / gdb / git / Makefile / CMake）</span></li>
+      <li><span class="rd-todo">☐ C 语言五阶段（指针→内存→链接→syscall→并发）</span></li>
+      <li><span class="rd-todo">☐ mini shell（管道 + 重定向）</span></li>
+      <li><span class="rd-todo">☐ 生产者-消费者队列（TSan 无告警）</span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 1–2 章 + <strong>Data Lab</strong></span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 3 章 + <strong>Bomb Lab</strong></span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 3 章 + <strong>Attack Lab</strong></span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 5 章（性能优化）</span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 6 章 + <strong>Cache Lab</strong></span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 9 章 + <strong>Malloc Lab</strong></span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 8 章 + <strong>Shell Lab</strong></span></li>
+      <li><span class="rd-todo">☐ CSAPP 第 10/12 章 + <strong>Proxy Lab</strong></span></li>
+      <li><span class="rd-todo">☐ 线代补课（MIT 18.06 选看）</span></li>
+    </ul>
+    <h2 id="2-大二上--三方向轮转探针"><span class="me-2">2. 大二上 · 三方向轮转探针</span><a href="#2-大二上--三方向轮转探针" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h3 id="探针-a--后端系统"><span class="me-2">探针 A · 后端/系统</span><a href="#探针-a--后端系统" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <ul>
+      <li><span class="rd-todo">☐ A1 C 写 epoll HTTP 服务器（keep-alive / 超时 / 静态文件）</span></li>
+      <li><span class="rd-todo">☐ A2 wrk 压测 + perf 定位 + 一轮优化（附前后对比）</span></li>
+      <li><span class="rd-todo">☐ A3（加分）Go 小服务 + etcd 注册 + 优雅重启</span></li>
+      <li><span class="rd-todo">☐ repo + README + 200 字感受</span></li>
+    </ul>
+    <h3 id="探针-b--ai-infrahpc"><span class="me-2">探针 B · AI Infra/HPC</span><a href="#探针-b--ai-infrahpc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <ul>
+      <li><span class="rd-todo">☐ B1 CUDA <code>reduce</code> kernel（多级归约）</span></li>
+      <li><span class="rd-todo">☐ B2 CUDA <code>sgemm</code>（tiling + shared memory）+ 与 cuBLAS 对比 GFLOPS</span></li>
+      <li><span class="rd-todo">☐ B3 <code>ncu</code> 剖析 + Roofline 图</span></li>
+      <li><span class="rd-todo">☐ B4 Triton fused LayerNorm</span></li>
+      <li><span class="rd-todo">☐ B5（加分）vLLM 跑 7B + nsys timeline</span></li>
+      <li><span class="rd-todo">☐ repo + 分析报告</span></li>
+    </ul>
+    <h3 id="探针-c--mlagent"><span class="me-2">探针 C · ML/Agent</span><a href="#探针-c--mlagent" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <ul>
+      <li><span class="rd-todo">☐ C1 手写反向传播（numpy，不用 autograd）</span></li>
+      <li><span class="rd-todo">☐ C2 nanoGPT 复现 + 训练一个字符级模型</span></li>
+      <li><span class="rd-todo">☐ C3 mini agent（3 个工具 + ReAct 循环 + 20 条 eval）</span></li>
+      <li><span class="rd-todo">☐ C4（加分）LoRA 微调 0.5B 做分类，对比 zero-shot</span></li>
+      <li><span class="rd-todo">☐ repo + loss 曲线 + eval 报告</span></li>
+    </ul>
+    <h3 id="决策"><span class="me-2">决策</span><a href="#决策" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <ul>
+      <li><span class="rd-todo">☐ 填写评分表（主观 4 项 + 客观 3 项）</span></li>
+      <li><span class="rd-todo">☐ 写 500 字决策备忘（选择 / 理由 / 退出条件）</span></li>
+      <li><span class="rd-todo">☐ <strong>主攻方向确定</strong>：__________（日期：______）</span></li>
+    </ul>
+    <h2 id="3-大二下-目标20272--20277"><span class="me-2">3. 大二下 目标（2027.2 – 2027.7）</span><a href="#3-大二下-目标20272--20277" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><span class="rd-todo">☐ CS144 完成（自己实现 TCP）</span></li>
+      <li><span class="rd-todo">☐ Go 语言上手（能写小服务）</span></li>
+      <li><span class="rd-todo">☐ 6.824 Lab 1 MapReduce</span></li>
+      <li><span class="rd-todo">☐ 6.824 Lab 2 Raft（含快照）</span></li>
+      <li><span class="rd-todo">☐ 6.824 Lab 3 KV Server</span></li>
+      <li><span class="rd-todo">☐ 主攻方向项目 v0.1</span></li>
+      <li><span class="rd-todo">☐ 主攻方向项目 v1.0（含 benchmark / 消融 / writeup）</span></li>
+      <li><span class="rd-todo">☐ <strong>投递日常实习 ≥20 家</strong></span></li>
+      <li><span class="rd-todo">☐ 面试 ≥3 场（记录每场问题与复盘）</span></li>
+    </ul>
+    <h2 id="4-大三上-目标20279--20281"><span class="me-2">4. 大三上 目标（2027.9 – 2028.1）</span><a href="#4-大三上-目标20279--20281" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><span class="rd-todo">☐ 6.824 Lab 4 Sharded KV</span></li>
+      <li><span class="rd-todo">☐ 简历重构（一页 / 项目数据化 / STAR）</span></li>
+      <li><span class="rd-todo">☐ 日常实习投递（大厂）+ 面试</span></li>
+      <li><span class="rd-todo">☐ <strong>拿到一段实习经历</strong></span></li>
+      <li><span class="rd-todo">☐ 12 月起投 2028 暑期实习 ≥15 家</span></li>
+      <li><span class="rd-todo">☐ 按面试反馈补短板（记录清单）</span></li>
+    </ul>
+    <h2 id="5-大三下--秋招20282--20291"><span class="me-2">5. 大三下 → 秋招（2028.2 – 2029.1）</span><a href="#5-大三下--秋招20282--20291" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li><span class="rd-todo">☐ 暑期实习面试（每场 24h 内复盘）</span></li>
+      <li><span class="rd-todo">☐ 拿到暑期实习 offer</span></li>
+      <li><span class="rd-todo">☐ 暑期实习 + 争取 return offer</span></li>
+      <li><span class="rd-todo">☐ 秋招投递与上岸</span></li>
+    </ul>
+    <h2 id="6-决策备忘写完粘贴到这里"><span class="me-2">6. 决策备忘（写完粘贴到这里）</span><a href="#6-决策备忘写完粘贴到这里" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <pre><code>日期：
+主攻方向：
+主攻理由（用数据）：
+副线：
+退出条件（什么情况下我会重新评估）：
+三个月后的里程碑：</code></pre>
+    <h2 id="7-面试复盘记录"><span class="me-2">7. 面试复盘记录</span><a href="#7-面试复盘记录" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>日期</th>
+          <th>公司/岗位</th>
+          <th>被问倒的问题</th>
+          <th>24h 内的补救动作</th>
+          <th>完成</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="8-我不喜欢--我不擅长清单同样值钱"><span class="me-2">8. 「我不喜欢 / 我不擅长」清单（同样值钱）</span><a href="#8-我不喜欢--我不擅长清单同样值钱" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li>（例：不喜欢只调参不看指标；不喜欢长时间没有确定性的调试……）</li>
+    </ul>
+
+</div>
+
+{% endraw %}

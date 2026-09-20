@@ -1,0 +1,151 @@
+---
+layout: page
+title: "主线 A：后端开发 · 基础架构"
+permalink: /roadmap/02-backend/
+---
+
+<link rel="stylesheet" href="/assets/css/roadmap.css">
+
+{% raw %}
+
+<div class="rd-content">
+
+<div class="rd-note">一句话：这个方向的护城河不在「会写业务代码」，而在<strong>能造轮子、能扛量、能定位故障</strong>。 反过来说：只写 CRUD 的「后端」，正是被 AI 压缩得最狠的岗位。</div>
+    <h2 id="1-能力分层自下而上缺一层就会在面试里露馅"><span class="me-2">1. 能力分层（自下而上，缺一层就会在面试里露馅）</span><a href="#1-能力分层自下而上缺一层就会在面试里露馅" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <pre><code>L4  架构与权衡：CAP、一致性模型选型、容量规划、成本、演进路径
+L3  分布式系统：共识、复制、分片、事务、消息语义、容错与混沌
+L2  存储与并发：LSM/B+树、WAL、MVCC、锁、无锁、内存管理
+L1  单机性能：epoll/io_uring、内存池、零拷贝、缓存友好、profiling
+L0  语言与系统：C/C++/Go、Linux、网络、进程线程、syscall</code></pre>
+    <p><strong>招聘市场上的真相</strong>：L0/L1 决定你能不能拿到面试（很多人在「讲不出一次性能优化」就挂了）， L2/L3 决定你是「普通后端」还是「基础架构/中间件」（溢价主要在这里）。</p>
+    <h2 id="2-阶梯与产出"><span class="me-2">2. 阶梯与产出</span><a href="#2-阶梯与产出" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h3 id="阶梯-1单机性能第-13-月也服务其他两个方向"><span class="me-2">阶梯 1：单机性能（第 1–3 月，也服务其他两个方向）</span><a href="#阶梯-1单机性能第-13-月也服务其他两个方向" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>任务</th>
+          <th>产出</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>C 写 epoll HTTP 服务器：keep-alive、超时、静态文件、日志</td>
+          <td>repo + wrk 压测曲线</td>
+        </tr>
+        <tr>
+          <td>用 <code>perf</code>/火焰图找出瓶颈，做一轮优化（内存池 / 减少 syscall / sendfile）</td>
+          <td>优化前后 QPS 对比报告</td>
+        </tr>
+        <tr>
+          <td>写一个线程池 + 无锁队列</td>
+          <td>用 TSan 验证无竞争</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>关键认知</strong>：<code>strace -c</code> / <code>perf top</code> / 火焰图 是后端工程师的听诊器，越早学会越好。</p>
+    <h3 id="阶梯-2造轮子第-36-月四选一贪多必失"><span class="me-2">阶梯 2：造轮子（第 3–6 月）——四选一，贪多必失</span><a href="#阶梯-2造轮子第-36-月四选一贪多必失" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>选题</th>
+          <th>难度</th>
+          <th>简历含金量</th>
+          <th>关键知识点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>mini Raft KV</strong></td>
+          <td>★★★</td>
+          <td>高（6.824 Lab2+3）</td>
+          <td>共识、日志复制、快照、线性一致读</td>
+        </tr>
+        <tr>
+          <td><strong>mini MQ</strong>（对标 Kafka 语义）</td>
+          <td>★★★</td>
+          <td>高</td>
+          <td>顺序写、零拷贝、分区、消费者组、至少一次/幂等</td>
+        </tr>
+        <tr>
+          <td><strong>mini 存储引擎 / LSM</strong></td>
+          <td>★★★★</td>
+          <td>极高</td>
+          <td>WAL、MemTable、Compaction、Bloom Filter、崩溃恢复</td>
+        </tr>
+        <tr>
+          <td><strong>mini 调度器 / RPC 框架</strong></td>
+          <td>★★★</td>
+          <td>中高</td>
+          <td>服务发现、负载均衡、超时重试熔断、代码生成</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>强烈建议的第一个轮子：mini Raft KV。</strong> 它有现成的 lab 框架可以对照，且面试可讲性最高。</p>
+    <h3 id="阶梯-3生产化第-612-月这一步区分学生项目和工程能力"><span class="me-2">阶梯 3：生产化（第 6–12 月）——这一步区分「学生项目」和「工程能力」</span><a href="#阶梯-3生产化第-612-月这一步区分学生项目和工程能力" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <ul>
+      <li>容器化 + <strong>K8s</strong> 部署（Deployment/Service/ConfigMap/探针），做一次滚动发布与回滚。</li>
+      <li><strong>可观测性</strong>：Prometheus + Grafana 面板 + OpenTelemetry 链路追踪；给系统打上指标（QPS、P99、队列深度、错误率）。</li>
+      <li><strong>压测与容量</strong>：定位 P99 毛刺来源（GC？锁竞争？磁盘 fsync？网络重传？）。</li>
+      <li><strong>故障演练</strong>：杀 leader、网络分区（<code>tc netem</code>）、磁盘写满、时钟漂移 —— 记录系统行为与恢复时间。</li>
+      <li>读源码：<strong>etcd → Redis → RocksDB → Envoy</strong>（按复杂度递增，别一上来读 Envoy）。</li>
+    </ul>
+    <h3 id="阶梯-4架构与权衡贯穿靠写-writeup-沉淀"><span class="me-2">阶梯 4：架构与权衡（贯穿，靠写 writeup 沉淀）</span><a href="#阶梯-4架构与权衡贯穿靠写-writeup-沉淀" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <ul>
+      <li>用 DDIA 的框架解释你做过的每个决定：「为什么这里选 CP 不选 AP」「为什么用推不用拉」。</li>
+      <li>能画出你系统的<strong>故障域图</strong>和<strong>容量模型</strong>，并说明单点在哪、怎么破。</li>
+    </ul>
+    <h2 id="3-必须能答出来的面试题自测清单"><span class="me-2">3. 必须能答出来的面试题（自测清单）</span><a href="#3-必须能答出来的面试题自测清单" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li>一次 HTTP 请求从网卡到你的 handler，中间发生了什么？延迟主要在哪些环节？</li>
+      <li><code>epoll</code> 的 LT/ET 区别、惊群问题、为什么需要 <code>EPOLLONESHOT</code>？</li>
+      <li>Raft 如何保证已提交日志不丢？为什么多数派提交就能保证？</li>
+      <li>线性一致读为什么不能直接读 follower？ReadIndex / lease read 各自解决什么？</li>
+      <li>LSM 的写放大/读放大/空间放大如何权衡？为什么需要 Compaction？</li>
+      <li>你的系统 P99 突然从 20ms 涨到 2s，你的排查顺序是什么？（<strong>这题几乎决定你能不能过</strong>）</li>
+    </ul>
+    <h2 id="4-语言选择"><span class="me-2">4. 语言选择</span><a href="#4-语言选择" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>语言</th>
+          <th>用途</th>
+          <th>建议</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>C</strong></td>
+          <td>底座、内核、性能</td>
+          <td>必须</td>
+        </tr>
+        <tr>
+          <td><strong>C++</strong></td>
+          <td>存储/中间件/推理引擎（字节、腾讯、华为的基础架构多用）</td>
+          <td>选做，学 RAII/智能指针/移动语义/并发</td>
+        </tr>
+        <tr>
+          <td><strong>Go</strong></td>
+          <td>云原生、后端服务（工程效率最高，转正实习友好）</td>
+          <td><strong>推荐主力</strong>，2 周即可上手</td>
+        </tr>
+        <tr>
+          <td><strong>Rust</strong></td>
+          <td>新中间件、数据库（TiKV/达梦等）</td>
+          <td>加分项，别当第一门语言</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>结论</strong>：C（底层理解）+ Go（工程交付）这个组合对本科实习生性价比最高；想进基础架构组再补 C++。</p>
+    <h2 id="5-资源"><span class="me-2">5. 资源</span><a href="#5-资源" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <ul>
+      <li>课程：<a href="https://pdos.csail.mit.edu/6.824/">MIT 6.824/6.5840</a>｜<a href="https://15445.courses.cs.cmu.edu/">CMU 15-445</a>｜<a href="https://cs144.github.io/">CS144</a></li>
+      <li>书：<a href="https://dataintensive.net/">DDIA</a>（圣经）｜《UNIX 网络编程》｜《Linux 高性能服务器编程》（游双）｜《数据密集型应用系统设计》｜《SRE Google 运维解密》</li>
+      <li>源码：Redis（万行级入门）→ LevelDB/RocksDB → etcd → Envoy</li>
+      <li>工具：<code>perf</code>、火焰图、<code>strace</code>、<code>tcpdump/wireshark</code>、<code>wrk</code>/<code>vegeta</code>、<code>fio</code>、Docker/K8s、Prometheus/Grafana、<code>tc netem</code></li>
+    </ul>
+    <h2 id="6-方向-a-的毕业作品大二下大三上完成"><span class="me-2">6. 方向 A 的毕业作品（大二下–大三上完成）</span><a href="#6-方向-a-的毕业作品大二下大三上完成" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <div class="rd-note">一个自研分布式 KV/MQ + K8s 部署 + Grafana 面板 + 压测报告 + 混沌演练记录 + 一篇 3000 字 writeup。 这一份东西，足以让本科简历通过大部分后端/基础架构岗的初筛。</div>
+
+</div>
+
+{% endraw %}

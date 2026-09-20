@@ -25,7 +25,7 @@ L0  ML 基础 + Python：张量、自动微分、Transformer 结构
 
 - 会写：手推反向传播 + 用 numpy 手写一个两层 MLP 的训练循环。
 - 懂结构：Transformer 的每个张量 shape、attention 的复杂度来源、KV Cache 为什么存在。
-- 产出去处：见〈主线 C：机器学习 · Agent〉的 C1。
+- 产出去处：见 #xref("04-ml-agent", "〈主线 C：机器学习 · Agent〉") 的 C1。
 
 === 阶梯 1：CUDA 编程（6–8 周，硬核期）
 

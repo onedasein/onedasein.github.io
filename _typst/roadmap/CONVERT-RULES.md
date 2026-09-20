@@ -1,5 +1,10 @@
 # Markdown → Typst 转换规范（本目录专用）
 
+> **历史文档**：这是 2026-09 把 `~/dsh/learning-roadmap/*.md` 一次性转成 Typst 时用的规范，
+> 转换已完成。现在 `.typ` 文件本身就是内容源（见 `README.md`），改内容不再需要对着 Markdown 转换。
+> 保留本文是因为其中「Typst 特殊字符 / 构件用法 / 保真要求」三节对后续编辑仍然有效。
+
+
 > 目标：把 `~/dsh/learning-roadmap/*.md` 逐字保真地转成 Typst 章节文件。
 > 版本：Typst 0.15.1（`/home/lp_tower/typst-x86_64-unknown-linux-musl/typst`）
 > 风格样本：`00-direction.typ`（**输出必须与它风格一致**）

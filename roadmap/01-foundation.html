@@ -1,0 +1,298 @@
+---
+layout: page
+title: "共同底座：CSAPP 与系统基础"
+permalink: /roadmap/01-foundation/
+---
+
+<link rel="stylesheet" href="/assets/css/roadmap.css">
+
+{% raw %}
+
+<div class="rd-content">
+
+<div class="rd-note">定位：这是三个方向<strong>都要吃的</strong>底座，总投入约 12 个月（每天 0.5–1h 的固定时段 + 项目里的「回头补」）。 核心原则：<strong>底座不是先修课，是脚手架。</strong> 做项目 → 卡住 → 按问题回查对应章节，比线性通读快 5 倍、扎实 3 倍。</div>
+    <h2 id="1-学习顺序有依赖关系的正确拓扑序"><span class="me-2">1. 学习顺序（有依赖关系的正确拓扑序）</span><a href="#1-学习顺序有依赖关系的正确拓扑序" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <pre><code>① C 语言与内存模型            （2–3 周，必须真会，不是"C 语言语法"）
+      ↓
+② CSAPP 第 3/5/6 章 + lab      （4–6 周，CPU/优化/存储层次）
+      ↓
+③ 组装 + 进程 + 虚拟内存        （CSAPP 第 7/8/9 章 + malloclab/shlab）
+      ↓
+④ 并发与 I/O                  （CSAPP 第 10/12 章，配 epoll 服务器，边做边学）
+      ↓
+⑤ 网络：CS144                 （4–6 周，自己写 TCP）
+      ↓
+⑥ OS 全景：OSTEP 或 6.S081     （8–10 周，选一个）
+      ↓
+⑦ 存储/数据库：15-445          （8–10 周，方向 A 必做，方向 B/C 可只做前 4 个 lab）
+      ↓
+⑧ 分布式：6.824 / 6.5840       （10–12 周，全 lab；方向 A 必做，B 强烈建议）</code></pre>
+    <p><strong>并行原则</strong>：⑥⑦⑧ 不要串行等待，可以在「当前主线方向」的项目里用上它们（比如写 KV 时同时吃 15-445 的 B+ 树 lab）。</p>
+    <h2 id="2-c-语言为什么绕不开怎么学"><span class="me-2">2. C 语言：为什么绕不开，怎么学</span><a href="#2-c-语言为什么绕不开怎么学" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p><strong>为什么</strong>：读 Linux 源码、内核、CUDA、RocksDB、Redis、PyTorch 的 C++ 层——全部要求你能看懂指针、内存布局、ABI、未定义行为。 只会 Python/Java 的人在做 AI Infra 时会在第一层就卡死。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>阶段</th>
+          <th>内容</th>
+          <th>验收</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>指针与数组的真实关系、<code>void*</code>、函数指针、结构体内存对齐</td>
+          <td>能手写通用的 <code>qsort</code> 风格回调</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>手动内存管理：<code>malloc/free</code> 语义、悬垂指针、double free、内存泄漏检测（ASan/valgrind）</td>
+          <td>用 ASan 找出一段故意埋雷代码的所有问题</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>编译链接：<code>.o/.a/.so</code>、符号、<code>nm/objdump/readelf</code>、静态 vs 动态链接</td>
+          <td>能解释一次 <code>undefined reference</code> 到底发生在哪个阶段</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>系统调用与错误处理：<code>errno</code>、<code>EINTR</code> 重试、<code>fork/exec/wait</code></td>
+          <td>手写一个 mini shell（管道 + 重定向）</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>并发：<code>pthread</code>、互斥锁、条件变量、<code>volatile</code>/原子性、内存序入门</td>
+          <td>手写生产者-消费者队列，无数据竞争（TSan 验证）</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>书籍</strong>：K&amp;R（薄，当参考）｜《C 陷阱与缺陷》｜《深入理解 C 指针》｜ <strong>必备实践</strong>：把 CSAPP 的 lab 用 C 全部做掉，这本身就是最好的 C 训练。</p>
+    <h2 id="3-csapp-正确读法重点章节--lab-优先级"><span class="me-2">3. CSAPP 正确读法（重点章节 + lab 优先级）</span><a href="#3-csapp-正确读法重点章节--lab-优先级" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <div class="rd-note">不要说「我要把 CSAPP 读完」。说「我要做掉这 6 个 lab，卡住就回去查章节」。</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Lab</th>
+          <th>对应章节</th>
+          <th>优先级</th>
+          <th>耗时</th>
+          <th>学到什么</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data Lab</td>
+          <td>第 2 章</td>
+          <td>★★</td>
+          <td>10–15h</td>
+          <td>位运算、补码、浮点 IEEE754</td>
+        </tr>
+        <tr>
+          <td>Bomb Lab</td>
+          <td>第 3 章</td>
+          <td>★★★</td>
+          <td>10–15h</td>
+          <td>读汇编、gdb 单步</td>
+        </tr>
+        <tr>
+          <td>Attack Lab</td>
+          <td>第 3 章</td>
+          <td>★★</td>
+          <td>8–12h</td>
+          <td>栈帧、缓冲区溢出、ROP（理解安全的起点）</td>
+        </tr>
+        <tr>
+          <td><strong>Cache Lab</strong></td>
+          <td>第 6 章</td>
+          <td>★★★</td>
+          <td>15–20h</td>
+          <td>存储层次、局部性、矩阵分块——<strong>直接迁移到 CUDA/性能优化</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Malloc Lab</strong></td>
+          <td>第 9 章</td>
+          <td>★★★</td>
+          <td>20–25h</td>
+          <td>显式/隐式空闲链表、碎片、<code>sbrk</code>——<strong>存储引擎的种子</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Shell Lab</strong></td>
+          <td>第 8 章</td>
+          <td>★★★</td>
+          <td>15–20h</td>
+          <td>进程、信号、作业控制、竞态——<strong>并发直觉的种子</strong></td>
+        </tr>
+        <tr>
+          <td>Proxy Lab</td>
+          <td>第 10/12 章</td>
+          <td>★★</td>
+          <td>15–20h</td>
+          <td>网络编程 + 线程池 + 缓存，最接近「可写进简历的成品」</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>章节精读优先级</strong>：3（汇编）≈ 6（存储层次）≈ 9（虚拟内存）> 5（性能优化）> 8（异常控制流）> 12（并发）> 10（I/O）> 7（链接）> 2（位）。 第 1、11 章扫一眼即可；第 4（处理器体系结构）在第一遍可跳过，等要做 AI Infra 时再回来读。</p>
+    <p><strong>常见错误读法</strong></p>
+    <ul>
+      <li><span class="rd-no"><span class="rd-mark">✗</span> 从第 1 章线性读到第 12 章、每个 lab 都不做 → 3 个月后全部忘记。</span></li>
+      <li><span class="rd-no"><span class="rd-mark">✗</span> 直接抄 lab 答案 → 唯一的价值（卡住 3 小时后的顿悟）被你自己删掉了。</span></li>
+      <li><span class="rd-no"><span class="rd-mark">✗</span> 把 CSAPP 当成「操作系统课」 → 它不教调度/文件系统实现，那些在 OSTEP/6.S081 里。</span></li>
+      <li><span class="rd-no"><span class="rd-mark">✗</span> 只读中文版不看 lab handout → lab handout 的英文是你在真实工作里的语言。</span></li>
+    </ul>
+    <h2 id="4-操作系统ostep-vs-6s081二选一"><span class="me-2">4. 操作系统：OSTEP vs 6.S081（二选一）</span><a href="#4-操作系统ostep-vs-6s081二选一" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">OSTEP</a></th>
+          <th><a href="https://pdos.csail.mit.edu/6.S081/2021/">MIT 6.S081</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>形式</td>
+          <td>免费书 + 少量作业</td>
+          <td>视频 + 5 个 xv6 lab</td>
+        </tr>
+        <tr>
+          <td>优点</td>
+          <td>讲解极清晰、覆盖全、可快速过</td>
+          <td>lab 硬核，写完真的懂内核</td>
+        </tr>
+        <tr>
+          <td>缺点</td>
+          <td>动手少</td>
+          <td>门槛高、耗时 100h+</td>
+        </tr>
+        <tr>
+          <td>建议</td>
+          <td><strong>必读</strong>（选读调度、虚拟内存、并发、文件系统四部分）</td>
+          <td>想在系统方向走深就做，或大三上做</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>产物</strong>：不要只读书。最低配：用 C 写一个 <strong>用户态线程库</strong>（<code>makecontext/swapcontext</code> 或 <code>ucontext</code>）+ 一个 <strong>slab 分配器</strong>。</p>
+    <h2 id="5-网络cs144强烈建议全做"><span class="me-2">5. 网络：<a href="https://cs144.github.io/">CS144</a>（强烈建议全做）</span><a href="#5-网络cs144强烈建议全做" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p>自己实现一个 TCP 接收/发送方：序列号、滑动窗口、重传、拥塞控制雏形。 做完之后，「TCP 为什么这样设计」「为什么要有 Nagle」「为什么延迟会抖动」这些问题会从背诵变成直觉。</p>
+    <p><strong>配套</strong>：《UNIX 网络编程 卷1》选读（IO 模型、<code>select/poll/epoll</code>）｜《TCP/IP 详解 卷1》 <strong>产物</strong>：探针 A 的 epoll 服务器 + CS144 的 TCP 实现 = 简历上「网络编程」这条不再是空话。</p>
+    <h2 id="6-数据库--存储cmu-15-445"><span class="me-2">6. 数据库 / 存储：<a href="https://15445.courses.cs.cmu.edu/">CMU 15-445</a></span><a href="#6-数据库--存储cmu-15-445" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <p>方向 A <strong>必做</strong>；方向 B（训练数据管线/Checkpoint）做 BufferPool + B+Tree 即可；方向 C 可跳过。</p>
+    <p>lab 顺序：Buffer Pool Manager → B+Tree → Query Execution → Concurrency Control（MVCC/锁）。 <strong>产出</strong>：一个能跑 SQL 的 mini 数据库，或一个自研 LSM 引擎（写路径：MemTable → WAL → SSTable → Compaction）。</p>
+    <h2 id="7-分布式mit-6824--65840"><span class="me-2">7. 分布式：<a href="https://pdos.csail.mit.edu/6.824/">MIT 6.824 / 6.5840</a></span><a href="#7-分布式mit-6824--65840" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Lab</th>
+          <th>内容</th>
+          <th>价值</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lab 1</td>
+          <td>MapReduce</td>
+          <td>入门，快速有成就感</td>
+        </tr>
+        <tr>
+          <td>Lab 2</td>
+          <td><strong>Raft</strong>（选举/日志/持久化/快照）</td>
+          <td>全课程核心，面试能讲 20 分钟</td>
+        </tr>
+        <tr>
+          <td>Lab 3</td>
+          <td>KV Server（线性一致 + 日志压缩）</td>
+          <td>真正的分布式系统</td>
+        </tr>
+        <tr>
+          <td>Lab 4</td>
+          <td>Sharded KV（配置变更 + 分片迁移）</td>
+          <td>工程复杂度最高，简历最亮</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>配套</strong>：<a href="https://dataintensive.net/">DDIA</a>（读 2 遍：做 lab 前读一遍建立框架，做完再读一遍对应章节）｜<a href="https://raft.github.io/">Raft 论文</a>（原文比任何博客都清楚）</p>
+    <h2 id="8-数学与体系结构方向-bc-专用方向-a-可后置"><span class="me-2">8. 数学与体系结构（方向 B/C 专用，方向 A 可后置）</span><a href="#8-数学与体系结构方向-bc-专用方向-a-可后置" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>科目</th>
+          <th>要多少</th>
+          <th>资源</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>线性代数</td>
+          <td>方向 C 必须扎实（矩阵乘法、特征值、SVD 直觉）</td>
+          <td>MIT 18.06 / 3Blue1Brown</td>
+        </tr>
+        <tr>
+          <td>概率统计</td>
+          <td>方向 C 必须（KL 散度、期望、采样、置信区间）</td>
+          <td>《概率论与数理统计》+ 实践</td>
+        </tr>
+        <tr>
+          <td>微积分/最优化</td>
+          <td>方向 C（链式法则、梯度、凸性直觉）</td>
+          <td>反向传播手推一遍胜过看十遍书</td>
+        </tr>
+        <tr>
+          <td>计算机体系结构</td>
+          <td>方向 B 必须（cache、流水线、SIMT、内存带宽）</td>
+          <td>CSAPP 第 4/5/6 章 + <a href="https://www.cs.cmu.edu/~418/">CMU 15-418</a> 或 UIUC ECE408</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>注意</strong>：方向 A 对数学要求很低，不要在数学上无限投入来逃避写代码。</p>
+    <h2 id="9-底座的时间预算别让它吞掉主线"><span class="me-2">9. 底座的时间预算（别让它吞掉主线）</span><a href="#9-底座的时间预算别让它吞掉主线" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>项目</th>
+          <th>总时长</th>
+          <th>安排方式</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>C 语言（含 mini shell）</td>
+          <td>40h</td>
+          <td>每天 1h，前 2 个月</td>
+        </tr>
+        <tr>
+          <td>CSAPP 6 个 lab</td>
+          <td>80–110h</td>
+          <td>每天 1h + 周末大块，前 5 个月</td>
+        </tr>
+        <tr>
+          <td>OSTEP 选读</td>
+          <td>30h</td>
+          <td>分散，遇到问题就读</td>
+        </tr>
+        <tr>
+          <td>CS144</td>
+          <td>50h</td>
+          <td>大二上后段到寒假</td>
+        </tr>
+        <tr>
+          <td>15-445</td>
+          <td>80h</td>
+          <td>方向 A：大二下；B：只做 2 个 lab</td>
+        </tr>
+        <tr>
+          <td>6.824</td>
+          <td>100h</td>
+          <td>大二下–大三上，最值得的一段投入</td>
+        </tr>
+        <tr>
+          <td><strong>合计</strong></td>
+          <td><strong>约 380–400h</strong></td>
+          <td>按每周 4h = 2 年；按每天 1h = 1 年出头</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rd-note">记住：底座的<strong>唯一目标是让你在主线项目里不卡在「不懂原理」上</strong>。如果底座占用了你 60% 以上的时间，说明你在用学习逃避交付。</div>
+
+</div>
+
+{% endraw %}

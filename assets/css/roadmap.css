@@ -1,0 +1,86 @@
+/* ============================================================
+   /roadmap/ 系列页面的样式。
+   页面内容由 Typst 导出（见 _typst/roadmap/），这里只管观感。
+   颜色全部走 Chirpy 主题变量，自动跟随亮/暗色模式。
+   ============================================================ */
+
+.rd-content {
+  line-height: 1.78;
+}
+
+/* ---------- 表格 ---------- */
+.rd-content table {
+  display: table;              /* 覆盖主题给 table 的响应式包装行为 */
+  width: 100%;
+  margin: 1.1rem 0 1.4rem;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+.rd-content th,
+.rd-content td {
+  border: 1px solid var(--main-border-color);
+  padding: 0.5rem 0.65rem;
+  vertical-align: top;
+}
+.rd-content thead th {
+  background: var(--card-header-bg);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.rd-content tbody tr:nth-child(odd) {
+  background: var(--card-bg);
+}
+
+/* ---------- 代码块 ---------- */
+.rd-content pre {
+  margin: 1rem 0 1.4rem;
+  padding: 0.85rem 0.95rem;
+  overflow-x: auto;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.3rem;
+  background: var(--card-bg);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+.rd-content pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+/* ---------- Typst 的 #note（提示框） ---------- */
+.rd-note {
+  margin: 1.1rem 0;
+  padding: 0.7rem 0.95rem;
+  border-left: 3px solid var(--link-color);
+  border-radius: 0.25rem;
+  background: var(--card-bg);
+  color: var(--text-muted-color);
+}
+.rd-note p {
+  margin: 0.35rem 0;
+}
+.rd-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- 勾选框 / ✗ 反例 ---------- */
+.rd-todo,
+.rd-done {
+  color: var(--text-muted-color);
+  white-space: nowrap;
+}
+.rd-mark {
+  color: #b3261e;
+  font-weight: 700;
+}
+
+/* ---------- 顶部的 PDF 下载条（#pdf-banner，仅网页版） ---------- */
+.rd-banner {
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--main-border-color);
+  border-left: 3px solid var(--link-color);
+  border-radius: 0.25rem;
+  background: var(--card-bg);
+}
