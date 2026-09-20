@@ -25,7 +25,8 @@ _typst/roadmap/
 ├── 04-ml-agent.typ       # 主线 C：机器学习 · Agent
 ├── 05-plan.typ           # 周计划与里程碑
 ├── 06-resources.typ      # 资源清单与避坑
-└── 07-progress.typ       # 进度追踪
+├── 07-progress.typ       # 进度追踪
+└── _legacy-md/           # 归档：重写前的 Markdown 原稿（不再维护，见其 _ARCHIVE-NOTES.md）
 ```
 
 ## 构建
