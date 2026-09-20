@@ -33,3 +33,6 @@ assets/js/dist
 *~
 .DS_Store
 Thumbs.db
+
+# Typst 构建中间产物
+_typst/roadmap/out

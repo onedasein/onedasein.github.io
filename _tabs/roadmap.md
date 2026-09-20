@@ -10,6 +10,9 @@ order: 5
 > 起点：2026-09（大二上，约 2029 届毕业）｜时间：每周几乎全部可自由实践
 > 目标：三个方向——① 后端/基础架构 ② AI Infra/高性能计算 ③ 机器学习/Agent，并补齐 CSAPP 等系统基础。
 
+> **PDF 版（Typst 排版）**：[下载《CS 成长路线图》PDF](/assets/roadmap/cs-roadmap.pdf) —— A4、含封面与目录，适合打印与离线阅读。源码在 `_typst/roadmap/`，重新生成：`bash tools/build-roadmap-pdf.sh`。
+{: .prompt-info }
+
 ---
 
 ## 0. 一句话策略
