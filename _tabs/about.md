@@ -17,5 +17,3 @@ order: 4
 - GitHub：<https://github.com/onedasein>
 - 邮箱：<abovethetower@outlook.com>
 
-> 这段内容在 `_tabs/about.md` 里修改。
-{: .prompt-tip }
