@@ -232,6 +232,9 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+  - "tsconfig.json"
+  - "pnpm-lock.yaml"
+  - node_modules
 
 jekyll-archives:
   enabled: [categories, tags]

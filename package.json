@@ -1,0 +1,24 @@
+{
+  "name": "blog-content-checks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "博客内容自检：把真实踩过的坑变成可执行的规则",
+  "type": "module",
+  "packageManager": "pnpm@9.15.3",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "check:content": "node tools/check-content.ts",
+    "check:types": "tsc --noEmit",
+    "check": "pnpm run check:types && pnpm run check:content"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2"
+  }
+}
