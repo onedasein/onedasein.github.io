@@ -36,3 +36,6 @@ Thumbs.db
 
 # Typst 构建中间产物
 _typst/roadmap/.build
+
+# 本地预览产物（截图、主题源码副本等，不进仓库）
+.preview

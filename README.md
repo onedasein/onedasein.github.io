@@ -90,11 +90,31 @@ _data/contact.yml           侧栏社交图标（Twitter 默认已注释，按�
 _tabs/                      关于/归档/分类/标签 这几个页面
 _posts/                     你的文章
 index.html                  首页（layout: home）
+_layouts/home.html          首页布局：hero 头图区 + 文章卡片（覆盖主题默认首页）
+assets/css/jekyll-theme-chirpy.scss   全站配色与排版（主题官方自定义入口）
+assets/img/favicons/        站点图标、PWA 图标、site.webmanifest
+assets/img/social-preview.png  分享卡片（og:image）
+tools/gen-assets.py         重新生成上面这些图
+404.html                    404 页
 _plugins/posts-lastmod-hook.rb  用 git 提交时间显示「最后修改」
 tools/init-site.sh          一次性占位符替换
 tools/local-preview.sh      本机预览
 tools/run.sh tools/test.sh  Chirpy 官方脚本（预览 / 构建+检查）
 .github/workflows/pages-deploy.yml   部署流水线
+```
+
+### 外观自定义（纸墨·青）
+
+配色、字体、圆角都收在 `assets/css/jekyll-theme-chirpy.scss` 顶部的 CSS 变量里，改几个值就能整体换肤：
+
+- `--accent` 强调色（浅色 `#0f766e` / 深色 `#6fd3c4`），按钮、链接、标题竖条都跟着它
+- `--main-bg` `--sidebar-bg` `--card-bg` 底色，`--heading-color` `--text-color` 文字色
+- `--font-serif` 只用在站名、首页大标题、文章标题和卡片标题上，正文仍是无衬线
+
+图标和分享图是按同一套配色画的，改完配色想同步重画：
+
+```bash
+python3 tools/gen-assets.py   # 需要 Pillow 与系统的 Noto CJK 字体
 ```
 
 ## 五、自定义域名（可选）
