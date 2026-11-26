@@ -87,14 +87,18 @@ description: 一句话摘要，会显示在首页列表和 SEO 描述里。
 ```
 _config.yml                 站点全部配置（改完 push 才生效）
 _data/contact.yml           侧栏社交图标（Twitter 默认已注释，按需打开）
-_tabs/                      关于/归档/分类/标签 这几个页面
+_tabs/                      关于/归档/分类/标签/热点 这几个页面
 _posts/                     你的文章
 index.html                  首页（layout: home）
 _layouts/home.html          首页布局：hero 头图区 + 文章卡片（覆盖主题默认首页）
 assets/css/jekyll-theme-chirpy.scss   全站配色与排版（主题官方自定义入口）
+assets/css/hotpulse.css     热点看板样式
+assets/js/hotpulse.js       热点看板渲染脚本
+assets/data/hotpulse.json   热点快照（HotPulse 导出）
 assets/img/favicons/        站点图标、PWA 图标、site.webmanifest
 assets/img/social-preview.png  分享卡片（og:image）
 tools/gen-assets.py         重新生成上面这些图
+tools/sync-hotpulse.sh      同步 HotPulse 快照
 404.html                    404 页
 _plugins/posts-lastmod-hook.rb  用 git 提交时间显示「最后修改」
 tools/init-site.sh          一次性占位符替换
@@ -116,6 +120,33 @@ tools/run.sh tools/test.sh  Chirpy 官方脚本（预览 / 构建+检查）
 ```bash
 python3 tools/gen-assets.py   # 需要 Pillow 与系统的 Noto CJK 字体
 ```
+
+### 热点雷达（HotPulse）
+
+`/hot/` 是 HotPulse 的静态可视化页，把 B站、知乎、抖音、贴吧、GitHub、Reddit 的公开榜单收在同一个看板里。页面只读取 `assets/data/hotpulse.json`，因此 GitHub Pages 不需要运行 Python。
+
+更新快照：
+
+```bash
+cd ../tools/hotpulse
+./hotpulse run --limit 20        # 采集六个平台；Reddit 需要 OAuth 凭据
+cd ../../blog
+tools/sync-hotpulse.sh           # 默认导出最新的 200 条到 assets/data/hotpulse.json
+git add assets/data/hotpulse.json
+git commit -m "chore: refresh hotpulse snapshot"
+```
+
+HotPulse 不在默认位置时，用 `HOTPULSE_BIN=/path/to/hotpulse tools/sync-hotpulse.sh`。同步脚本会传绝对输出路径，避免 HotPulse 启动器切换目录后写错位置。
+
+相关文件：
+
+- `_tabs/hot.md`：热点页入口
+- `assets/data/hotpulse.json`：静态快照（需随采集更新并提交）
+- `assets/css/hotpulse.css`、`assets/js/hotpulse.js`：看板样式与原生 JS 渲染
+- `tools/sync-hotpulse.sh`：从同级 HotPulse 仓库同步快照
+
+> 看板是采集时点的快照，不是实时行情。Reddit 未配置凭据时会显示「待接入」，不影响其他平台。
+{: .prompt-info }
 
 ## 五、自定义域名（可选）
 

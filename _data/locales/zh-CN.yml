@@ -1,8 +1,8 @@
 # 本文件是 Chirpy 主题 _data/locales/zh-CN.yml 的副本。
-# 唯一改动：tabs 下新增 roadmap: 路线图。
+# 唯一改动：tabs 下新增 roadmap: 路线图、hot: 热点雷达。
 # 原因：Chirpy 的 <title> 模板对 tabs 集合按 `page.title|downcase` 查 locale 表，
 #       自定义 tab 缺 locale 键时 <title> 会渲染成空（只剩 " | 站点名"）。
-# 升级主题后若需同步其它文案，重新拷贝本文件并保留 roadmap 一行。
+# 升级主题后若需同步其它文案，重新拷贝本文件并保留新增行。
 # The layout text of site
 
 # ----- Commons label -----
@@ -21,6 +21,7 @@ tabs:
   archives: 归档
   about: 关于
   roadmap: 路线图
+  hot: 热点雷达
 
 # the text displayed in the search bar & search results
 search:
