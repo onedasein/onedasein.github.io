@@ -10,7 +10,7 @@ order: 5
 
 - 由 [Jekyll](https://jekyllrb.com/) + [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 主题驱动
 - 托管在 **GitHub Pages**，`git push` 后由 GitHub Actions 自动构建发布
-- 源码仓库：<https://github.com/onedasein/blog>
+- 源码仓库：<https://github.com/onedasein/onedasein.github.io>
 
 ## 联系方式
 
