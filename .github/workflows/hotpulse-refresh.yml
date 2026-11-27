@@ -1,0 +1,80 @@
+name: "Refresh HotPulse"
+
+on:
+  schedule:
+    # 每 3 小时刷新一次；GitHub 的定时任务使用 UTC。
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      min_platforms:
+        description: "最少需要多少个平台有数据，低于该值则保留旧快照"
+        required: false
+        default: "3"
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: hotpulse-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Prepare database path
+        run: mkdir -p "${RUNNER_TEMP}/hotpulse-data"
+
+      - name: Restore HotPulse database
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/hotpulse-data
+          key: hotpulse-db-${{ github.run_id }}
+          restore-keys: |
+            hotpulse-db-
+
+      - name: Collect and export snapshot
+        env:
+          HOTPULSE_BIN: ${{ github.workspace }}/tools/hotpulse/hotpulse
+          HOTPULSE_DB: ${{ runner.temp }}/hotpulse-data/hotpulse.db
+          HOTPULSE_MIN_PLATFORMS: ${{ inputs.min_platforms || '3' }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        run: tools/refresh-hotpulse.sh
+
+      - name: Commit changed snapshot
+        id: commit
+        run: |
+          if git diff --quiet -- assets/data/hotpulse.json; then
+            echo "快照没有变化，跳过提交"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/hotpulse.json
+          git commit -m "chore: 自动刷新热点快照"
+          # checkout 在 schedule 事件下可能处于 detached HEAD，显式推送到触发分支。
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages-deploy.yml --ref "${GITHUB_REF_NAME}"

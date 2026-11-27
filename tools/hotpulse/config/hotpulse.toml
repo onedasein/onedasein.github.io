@@ -1,0 +1,77 @@
+# HotPulse MVP 配置
+# 相对路径以启动命令所在目录为基准。
+
+[app]
+database = "data/hotpulse.db"
+log_level = "INFO"
+user_agent = "HotPulse/0.1 (local research hot-topic aggregator)"
+# API 开启后，POST /api/v1/collect 需要 Authorization: Bearer <token>
+api_token = ""
+http_proxy = ""
+max_response_bytes = 8000000
+
+[scheduler]
+max_workers = 4
+retry_attempts = 2
+retry_backoff_seconds = 1.5
+jitter_seconds = 5
+
+[cleaner]
+min_title_length = 2
+max_title_length = 300
+max_summary_length = 600
+drop_nsfw = true
+
+[analysis]
+half_life_hours = 24.0
+rank_weight = 0.55
+heat_weight = 0.30
+recency_weight = 0.15
+stale_after_hours = 24.0
+keyword_limit = 20
+
+[platforms.bilibili]
+enabled = true
+limit = 50
+interval_seconds = 300
+weight = 1.0
+timeout_seconds = 15
+
+[platforms.zhihu]
+enabled = true
+limit = 50
+interval_seconds = 300
+weight = 1.0
+timeout_seconds = 15
+
+[platforms.douyin]
+enabled = true
+limit = 50
+interval_seconds = 300
+weight = 1.1
+timeout_seconds = 15
+
+[platforms.tieba]
+enabled = true
+limit = 50
+interval_seconds = 600
+weight = 0.9
+timeout_seconds = 15
+
+[platforms.reddit]
+enabled = true
+limit = 50
+interval_seconds = 600
+weight = 1.0
+timeout_seconds = 15
+# Reddit 官方 OAuth 凭据通过环境变量提供（不要写进仓库）：
+# REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET
+# 无凭据时依次尝试公开 JSON 与 Atom RSS；若出口 IP 被拒会明确报错。
+
+[platforms.github]
+enabled = true
+limit = 25
+interval_seconds = 900
+weight = 1.0
+timeout_seconds = 15
+options = { since = "daily" }

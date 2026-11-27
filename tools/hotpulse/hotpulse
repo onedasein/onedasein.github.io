@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 无安装启动器：始终以仓库内 src 为包搜索路径。
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "${ROOT}"
+exec env PYTHONPATH="${ROOT}/src${PYTHONPATH:+:${PYTHONPATH}}" python3 -m hotpulse "$@"

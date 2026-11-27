@@ -125,25 +125,44 @@ python3 tools/gen-assets.py   # 需要 Pillow 与系统的 Noto CJK 字体
 
 `/hot/` 是 HotPulse 的静态可视化页，把 B站、知乎、抖音、贴吧、GitHub、Reddit 的公开榜单收在同一个看板里。页面只读取 `assets/data/hotpulse.json`，因此 GitHub Pages 不需要运行 Python。
 
-更新快照：
+#### 自动刷新
+
+`.github/workflows/hotpulse-refresh.yml` 默认每 3 小时运行一次，也可以在 Actions 页面手动触发：
+
+1. 用仓库内的 `tools/hotpulse/` 运行时副本采集六个平台；
+2. 导出到临时文件，校验至少 20 条热点、3 个平台有数据，且快照不超过 6 小时；
+3. 校验通过才原子替换 `assets/data/hotpulse.json`，失败则保留旧快照；
+4. 数据有变化时由 Actions 提交并推送，然后触发 `pages-deploy.yml` 重新部署。
+
+Reddit 可选配置仓库 Secrets：`REDDIT_CLIENT_ID`、`REDDIT_CLIENT_SECRET`；不配置时页面显示「待接入」。
+
+> GitHub 托管 runner 的出口 IP 可能被部分国内平台限流。工作流校验失败会停止且不覆盖旧数据；此时可以在本机采集后手动提交，或把 runner 换成能访问这些平台的自托管 runner。
+
+#### 手动更新
 
 ```bash
-cd ../tools/hotpulse
-./hotpulse run --limit 20        # 采集六个平台；Reddit 需要 OAuth 凭据
-cd ../../blog
-tools/sync-hotpulse.sh           # 默认导出最新的 200 条到 assets/data/hotpulse.json
+tools/refresh-hotpulse.sh        # 采集 + 导出 + 校验 + 原子替换
 git add assets/data/hotpulse.json
 git commit -m "chore: refresh hotpulse snapshot"
 ```
 
-HotPulse 不在默认位置时，用 `HOTPULSE_BIN=/path/to/hotpulse tools/sync-hotpulse.sh`。同步脚本会传绝对输出路径，避免 HotPulse 启动器切换目录后写错位置。
+只想从已有数据库重新导出、不重新采集时：
+
+```bash
+tools/sync-hotpulse.sh
+```
+
+HotPulse 不在默认位置时，用 `HOTPULSE_BIN=/path/to/hotpulse tools/refresh-hotpulse.sh`。`tools/refresh-hotpulse.sh` 还会读取 `HOTPULSE_LIMIT`、`HOTPULSE_EXPORT_LIMIT`、`HOTPULSE_MIN_TOPICS`、`HOTPULSE_MIN_PLATFORMS`、`HOTPULSE_MAX_AGE_HOURS`。
 
 相关文件：
 
 - `_tabs/hot.md`：热点页入口
-- `assets/data/hotpulse.json`：静态快照（需随采集更新并提交）
+- `assets/data/hotpulse.json`：静态快照
 - `assets/css/hotpulse.css`、`assets/js/hotpulse.js`：看板样式与原生 JS 渲染
-- `tools/sync-hotpulse.sh`：从同级 HotPulse 仓库同步快照
+- `tools/refresh-hotpulse.sh`：采集、导出与校验
+- `tools/sync-hotpulse.sh`：只导出已有数据库
+- `tools/hotpulse/`：GitHub Actions 使用的运行时副本；源码更新后用 `tools/vendor-hotpulse.sh` 同步
+- `.github/workflows/hotpulse-refresh.yml`：定时刷新工作流
 
 > 看板是采集时点的快照，不是实时行情。Reddit 未配置凭据时会显示「待接入」，不影响其他平台。
 {: .prompt-info }
