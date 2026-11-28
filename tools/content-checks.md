@@ -15,6 +15,17 @@ node tools/check-content.ts --root <目录> --json   # 换根目录 / 机器可�
 
 退出码：有 error → 1，只有 warning 或全绿 → 0。CI 里 `pages-deploy.yml` 会在 Ruby 构建之前先跑它（fail fast）。
 
+## 本地 pre-commit 钩子
+
+`.githooks/pre-commit` 在提交前跑一遍 `check:content`，把会让 CI 整体失败的几类问题挡在本地 —— 起因是一次提交把 `_posts/2026-09-14-hello-world.md` 首行的 `---` 并进了 `title:`，front matter 整段失效，本地没检查、CI 的 `Check content` 直接失败，Pages 也就没部署。
+
+```bash
+git config core.hooksPath .githooks   # 克隆后做一次（本仓库已设置）
+git commit --no-verify                # 确实要跳过时
+```
+
+钩子对 Node 版本有要求：脚本是 `.ts`，靠 Node 自带的类型剥离直接运行，需要 **Node >= 23.6**。发行版打包的 Node 22 编译时没带 TypeScript 支持，会报 `ERR_NO_TYPESCRIPT` —— 那个报错看起来像脚本坏了，其实是运行时太旧。根目录的 `.node-version` 写着与 CI 一致的版本，钩子会自动在 PATH 里挑一个够新的 `node`，找不到时才报错。
+
 ## 五条规则及其来源
 
 | 规则 | 严重级 | 编码的事故 |

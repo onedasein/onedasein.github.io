@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# 提交前跑内容自检（tools/check-content.ts），把会让 CI 整体失败的
+# front matter / 文件名 / http 链接 / tabs 键问题挡在本地。
+#
+# 启用：git config core.hooksPath .githooks   （本仓库已设置）
+# 跳过：git commit --no-verify
+#
+# 为什么要挑 node：检查脚本是 .ts，靠 Node 自带的类型剥离直接运行，
+# 要求 Node >= 23.6（见 package.json 的 engines）。发行版打包的 Node 22
+# 编译时没带 TypeScript 支持，会报 ERR_NO_TYPESCRIPT —— 那种失败看起来
+# 像脚本坏了，其实是运行时太旧，所以这里先挑对解释器再跑。
+
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+# 挑一个能直接跑 .ts 的 node（>= 23.6）。
+node_bin=""
+for candidate in "$(command -v node 2>/dev/null || true)" "$HOME/.local/bin/node" "$HOME/.local/opt/node/bin/node"; do
+  [ -n "$candidate" ] && [ -x "$candidate" ] || continue
+  version="$("$candidate" -p 'process.versions.node' 2>/dev/null || true)"
+  [ -n "$version" ] || continue
+  major="${version%%.*}"
+  rest="${version#*.}"
+  minor="${rest%%.*}"
+  if [ "$major" -gt 23 ] || { [ "$major" -eq 23 ] && [ "$minor" -ge 6 ]; }; then
+    node_bin="$candidate"
+    break
+  fi
+done
+
+if [ -z "$node_bin" ]; then
+  echo "pre-commit: 找不到 Node >= 23.6（检查脚本用 .ts + 类型剥离运行）。" >&2
+  echo "            当前 PATH 里的 node 是 $(node -v 2>/dev/null || echo '未安装')。" >&2
+  echo "            装一个 24.x（例如 ~/.local/opt/node）后重试，或用 git commit --no-verify 跳过。" >&2
+  exit 1
+fi
+
+# 依赖没装时先装一次；--frozen-lockfile 保证不会偷偷改 pnpm-lock.yaml。
+if [ ! -d node_modules ] || [ ! -d node_modules/zod ] || [ ! -d node_modules/yaml ]; then
+  echo "pre-commit: 安装内容自检的依赖…"
+  pnpm install --frozen-lockfile --silent
+fi
+
+echo "pre-commit: 内容自检"
+exec "$node_bin" tools/check-content.ts
