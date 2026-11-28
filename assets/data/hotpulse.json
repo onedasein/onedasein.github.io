@@ -1,58 +1,63 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:19:26Z",
-  "data_through": "2026-11-28T03:19:26Z",
+  "generated_at": "2026-11-28T15:31:51Z",
+  "data_through": "2026-11-28T15:31:50Z",
   "source": {
     "name": "HotPulse",
     "version": "0.1.0",
     "description": "Layered multi-platform hot-topic aggregator"
   },
   "stats": {
-    "topics": 169,
-    "total_topics": 169,
-    "snapshots": 288,
-    "runs": 18,
+    "topics": 200,
+    "total_topics": 210,
+    "snapshots": 384,
+    "runs": 24,
     "platforms": 6,
     "active_platforms": 5,
-    "average_score": 61.12,
+    "average_score": 62.26,
     "max_score": 100.0
   },
   "trends": {
-    "new": 93,
-    "rising": 12,
-    "steady": 27,
-    "falling": 37
+    "new": 117,
+    "rising": 18,
+    "steady": 25,
+    "falling": 40
   },
   "categories": [
     {
       "key": "other",
       "label": "其他",
-      "count": 93
+      "count": 107
     },
     {
       "key": "tech",
       "label": "科技",
-      "count": 35
+      "count": 42
     },
     {
       "key": "society",
       "label": "社会",
-      "count": 12
-    },
-    {
-      "key": "finance",
-      "label": "财经",
-      "count": 7
-    },
-    {
-      "key": "gaming",
-      "label": "游戏",
-      "count": 7
+      "count": 13
     },
     {
       "key": "entertainment",
       "label": "娱乐",
+      "count": 11
+    },
+    {
+      "key": "finance",
+      "label": "财经",
       "count": 6
+    },
+    {
+      "key": "gaming",
+      "label": "游戏",
+      "count": 6
+    },
+    {
+      "key": "education",
+      "label": "教育",
+      "count": 5
     },
     {
       "key": "lifestyle",
@@ -65,18 +70,13 @@
       "count": 3
     },
     {
-      "key": "education",
-      "label": "教育",
-      "count": 1
+      "key": "sports",
+      "label": "体育",
+      "count": 3
     },
     {
       "key": "health",
       "label": "健康",
-      "count": 1
-    },
-    {
-      "key": "sports",
-      "label": "体育",
       "count": 1
     }
   ],
@@ -89,16 +89,16 @@
       "icon": "tv",
       "enabled": true,
       "weight": 1.0,
-      "count": 29,
-      "last_seen": "2026-11-28T03:19:26Z",
+      "count": 36,
+      "last_seen": "2026-11-28T15:31:50Z",
       "last_run": {
-        "id": 13,
+        "id": 19,
         "platform": "bilibili",
         "status": "success",
         "item_count": 20,
-        "duration_ms": 1912,
-        "started_at": "2026-11-28T03:19:24Z",
-        "finished_at": "2026-11-28T03:19:26Z",
+        "duration_ms": 2263,
+        "started_at": "2026-11-28T15:31:48Z",
+        "finished_at": "2026-11-28T15:31:50Z",
         "source": "ranking"
       },
       "top": [
@@ -111,13 +111,13 @@
           "title": "《下一个是谁》第七季（6）",
           "url": "https://www.bilibili.com/video/BV15Q1WzRENh",
           "rank": 1,
-          "hot_value": 1422319.0,
-          "score": 90.21,
+          "hot_value": 2463660.0,
+          "score": 89.03,
           "trend": "steady",
           "trend_label": "持平",
           "category": "gaming",
           "category_label": "游戏",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         },
         {
           "platform": "bilibili",
@@ -128,13 +128,13 @@
           "title": "吴 众",
           "url": "https://www.bilibili.com/video/BV1xvykzsEPv",
           "rank": 2,
-          "hot_value": 2972221.0,
-          "score": 81.95,
-          "trend": "rising",
-          "trend_label": "升温",
+          "hot_value": 3293634.0,
+          "score": 81.96,
+          "trend": "steady",
+          "trend_label": "持平",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         },
         {
           "platform": "bilibili",
@@ -158,6 +158,23 @@
           "platform_label": "Bilibili",
           "platform_short": "B站",
           "platform_color": "#00a1d6",
+          "external_id": "BV11AyUz6E6h",
+          "title": "长得帅就要被网爆么?",
+          "url": "https://www.bilibili.com/video/BV11AyUz6E6h",
+          "rank": 3,
+          "hot_value": 2942258.0,
+          "score": 80.38,
+          "trend": "rising",
+          "trend_label": "升温",
+          "category": "other",
+          "category_label": "其他",
+          "observed_at": "2026-11-28T15:31:50Z"
+        },
+        {
+          "platform": "bilibili",
+          "platform_label": "Bilibili",
+          "platform_short": "B站",
+          "platform_color": "#00a1d6",
           "external_id": "BV1qYyRz5EdM",
           "title": "【火影十一年 神临时刻】漩涡鸣人[阳之力]即将登场！",
           "url": "https://www.bilibili.com/video/BV1qYyRz5EdM",
@@ -169,23 +186,6 @@
           "category": "tech",
           "category_label": "科技",
           "observed_at": "2026-11-27T06:17:07Z"
-        },
-        {
-          "platform": "bilibili",
-          "platform_label": "Bilibili",
-          "platform_short": "B站",
-          "platform_color": "#00a1d6",
-          "external_id": "BV1esyZz7ExF",
-          "title": "《绝区零》挽昼角色展示 | 日陨之前",
-          "url": "https://www.bilibili.com/video/BV1esyZz7ExF",
-          "rank": 3,
-          "hot_value": 2943412.0,
-          "score": 78.57,
-          "trend": "falling",
-          "trend_label": "降温",
-          "category": "tech",
-          "category_label": "科技",
-          "observed_at": "2026-11-28T03:19:26Z"
         }
       ]
     },
@@ -197,19 +197,36 @@
       "icon": "question",
       "enabled": true,
       "weight": 1.0,
-      "count": 50,
-      "last_seen": "2026-11-28T03:19:24Z",
+      "count": 65,
+      "last_seen": "2026-11-28T15:31:50Z",
       "last_run": {
-        "id": 14,
+        "id": 20,
         "platform": "zhihu",
         "status": "success",
         "item_count": 20,
-        "duration_ms": 776,
-        "started_at": "2026-11-28T03:19:24Z",
-        "finished_at": "2026-11-28T03:19:24Z",
+        "duration_ms": 2454,
+        "started_at": "2026-11-28T15:31:48Z",
+        "finished_at": "2026-11-28T15:31:50Z",
         "source": "hot-list"
       },
       "top": [
+        {
+          "platform": "zhihu",
+          "platform_label": "知乎",
+          "platform_short": "知乎",
+          "platform_color": "#056de8",
+          "external_id": "2110027159284863346",
+          "title": "怎么看DeepSeek 将多个核心算子优化至华为昇腾 950 的硬件极限，这对国产算力意味着什么？",
+          "url": "https://www.zhihu.com/question/2110027159284863346",
+          "rank": 1,
+          "hot_value": 15820000.0,
+          "score": 96.77,
+          "trend": "new",
+          "trend_label": "新上榜",
+          "category": "tech",
+          "category_label": "科技",
+          "observed_at": "2026-11-28T15:31:50Z"
+        },
         {
           "platform": "zhihu",
           "platform_label": "知乎",
@@ -277,23 +294,6 @@
           "category": "other",
           "category_label": "其他",
           "observed_at": "2026-11-27T06:17:06Z"
-        },
-        {
-          "platform": "zhihu",
-          "platform_label": "知乎",
-          "platform_short": "知乎",
-          "platform_color": "#056de8",
-          "external_id": "2109585824480236082",
-          "title": "如何看待女子称因年龄超 40 岁被酒店拒绝入住？预订平台没有醒目提示，这种规定合法吗？",
-          "url": "https://www.zhihu.com/question/2109585824480236082",
-          "rank": 3,
-          "hot_value": 4490000.0,
-          "score": 86.34,
-          "trend": "new",
-          "trend_label": "新上榜",
-          "category": "society",
-          "category_label": "社会",
-          "observed_at": "2026-11-28T03:19:24Z"
         }
       ]
     },
@@ -305,16 +305,16 @@
       "icon": "music",
       "enabled": true,
       "weight": 1.1,
-      "count": 48,
-      "last_seen": "2026-11-28T03:19:25Z",
+      "count": 63,
+      "last_seen": "2026-11-28T15:31:49Z",
       "last_run": {
-        "id": 15,
+        "id": 21,
         "platform": "douyin",
         "status": "success",
         "item_count": 20,
-        "duration_ms": 1212,
-        "started_at": "2026-11-28T03:19:24Z",
-        "finished_at": "2026-11-28T03:19:25Z",
+        "duration_ms": 1052,
+        "started_at": "2026-11-28T15:31:48Z",
+        "finished_at": "2026-11-28T15:31:49Z",
         "source": "hot-search"
       },
       "top": [
@@ -357,28 +357,28 @@
           "platform_label": "抖音",
           "platform_short": "抖音",
           "platform_color": "#fe2c55",
-          "external_id": "2768778",
-          "title": "詹姆斯开场三分3连中",
-          "url": "https://www.douyin.com/search/%E8%A9%B9%E5%A7%86%E6%96%AF%E5%BC%80%E5%9C%BA%E4%B8%89%E5%88%863%E8%BF%9E%E4%B8%AD",
+          "external_id": "2768708",
+          "title": "U17国足将迎战塞尔维亚",
+          "url": "https://www.douyin.com/search/U17%E5%9B%BD%E8%B6%B3%E5%B0%86%E8%BF%8E%E6%88%98%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A",
           "rank": 2,
-          "hot_value": 11545986.0,
+          "hot_value": 10817477.0,
           "score": 100.0,
-          "trend": "new",
-          "trend_label": "新上榜",
+          "trend": "rising",
+          "trend_label": "升温",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:25Z"
+          "observed_at": "2026-11-28T15:31:49Z"
         },
         {
           "platform": "douyin",
           "platform_label": "抖音",
           "platform_short": "抖音",
           "platform_color": "#fe2c55",
-          "external_id": "2768708",
-          "title": "U17国足将迎战塞尔维亚",
-          "url": "https://www.douyin.com/search/U17%E5%9B%BD%E8%B6%B3%E5%B0%86%E8%BF%8E%E6%88%98%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A",
-          "rank": 3,
-          "hot_value": 11258335.0,
+          "external_id": "2768778",
+          "title": "詹姆斯开场三分3连中",
+          "url": "https://www.douyin.com/search/%E8%A9%B9%E5%A7%86%E6%96%AF%E5%BC%80%E5%9C%BA%E4%B8%89%E5%88%863%E8%BF%9E%E4%B8%AD",
+          "rank": 2,
+          "hot_value": 11545986.0,
           "score": 100.0,
           "trend": "new",
           "trend_label": "新上榜",
@@ -413,16 +413,16 @@
       "icon": "comments",
       "enabled": true,
       "weight": 0.9,
-      "count": 26,
-      "last_seen": "2026-11-28T03:19:25Z",
+      "count": 20,
+      "last_seen": "2026-11-28T15:31:49Z",
       "last_run": {
-        "id": 16,
+        "id": 22,
         "platform": "tieba",
         "status": "success",
         "item_count": 20,
-        "duration_ms": 1211,
-        "started_at": "2026-11-28T03:19:24Z",
-        "finished_at": "2026-11-28T03:19:25Z",
+        "duration_ms": 1132,
+        "started_at": "2026-11-28T15:31:48Z",
+        "finished_at": "2026-11-28T15:31:49Z",
         "source": "topicList"
       },
       "top": [
@@ -431,17 +431,51 @@
           "platform_label": "贴吧",
           "platform_short": "贴吧",
           "platform_color": "#4e6ef2",
+          "external_id": "28370536",
+          "title": "千问认领二创拟人形象",
+          "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370536&topic_name=%E5%8D%83%E9%97%AE%E8%AE%A4%E9%A2%86%E4%BA%8C%E5%88%9B%E6%8B%9F%E4%BA%BA%E5%BD%A2%E8%B1%A1",
+          "rank": 1,
+          "hot_value": 2827170.0,
+          "score": 88.54,
+          "trend": "new",
+          "trend_label": "新上榜",
+          "category": "entertainment",
+          "category_label": "娱乐",
+          "observed_at": "2026-11-28T15:31:49Z"
+        },
+        {
+          "platform": "tieba",
+          "platform_label": "贴吧",
+          "platform_short": "贴吧",
+          "platform_color": "#4e6ef2",
+          "external_id": "28370541",
+          "title": "小孩3比0送走曾家镇",
+          "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370541&topic_name=%E5%B0%8F%E5%AD%A93%E6%AF%940%E9%80%81%E8%B5%B0%E6%9B%BE%E5%AE%B6%E9%95%87",
+          "rank": 3,
+          "hot_value": 1948520.0,
+          "score": 82.95,
+          "trend": "new",
+          "trend_label": "新上榜",
+          "category": "sports",
+          "category_label": "体育",
+          "observed_at": "2026-11-28T15:31:49Z"
+        },
+        {
+          "platform": "tieba",
+          "platform_label": "贴吧",
+          "platform_short": "贴吧",
+          "platform_color": "#4e6ef2",
           "external_id": "28370483",
           "title": "左手亲口给杰克平反",
           "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370483&topic_name=%E5%B7%A6%E6%89%8B%E4%BA%B2%E5%8F%A3%E7%BB%99%E6%9D%B0%E5%85%8B%E5%B9%B3%E5%8F%8D",
-          "rank": 1,
-          "hot_value": 2637300.0,
-          "score": 88.65,
-          "trend": "new",
-          "trend_label": "新上榜",
+          "rank": 2,
+          "hot_value": 2764019.0,
+          "score": 82.4,
+          "trend": "falling",
+          "trend_label": "降温",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:25Z"
+          "observed_at": "2026-11-28T15:31:49Z"
         },
         {
           "platform": "tieba",
@@ -451,14 +485,14 @@
           "external_id": "28370485",
           "title": "丝之歌DLC真定档了",
           "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370485&topic_name=%E4%B8%9D%E4%B9%8B%E6%AD%8CDLC%E7%9C%9F%E5%AE%9A%E6%A1%A3%E4%BA%86",
-          "rank": 2,
-          "hot_value": 2556930.0,
-          "score": 86.15,
-          "trend": "new",
-          "trend_label": "新上榜",
+          "rank": 4,
+          "hot_value": 1509867.0,
+          "score": 76.2,
+          "trend": "falling",
+          "trend_label": "降温",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:25Z"
+          "observed_at": "2026-11-28T15:31:49Z"
         },
         {
           "platform": "tieba",
@@ -468,48 +502,14 @@
           "external_id": "28370473",
           "title": "塔赞被韩国追缴1800万税款",
           "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370473&topic_name=%E5%A1%94%E8%B5%9E%E8%A2%AB%E9%9F%A9%E5%9B%BD%E8%BF%BD%E7%BC%B41800%E4%B8%87%E7%A8%8E%E6%AC%BE",
-          "rank": 3,
-          "hot_value": 2282532.0,
-          "score": 80.47,
-          "trend": "falling",
-          "trend_label": "降温",
-          "category": "other",
-          "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:25Z"
-        },
-        {
-          "platform": "tieba",
-          "platform_label": "贴吧",
-          "platform_short": "贴吧",
-          "platform_color": "#4e6ef2",
-          "external_id": "28370487",
-          "title": "男子被困山洞扔手机发出求救",
-          "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370487&topic_name=%E7%94%B7%E5%AD%90%E8%A2%AB%E5%9B%B0%E5%B1%B1%E6%B4%9E%E6%89%94%E6%89%8B%E6%9C%BA%E5%8F%91%E5%87%BA%E6%B1%82%E6%95%91",
           "rank": 5,
-          "hot_value": 1540526.0,
-          "score": 77.72,
-          "trend": "new",
-          "trend_label": "新上榜",
-          "category": "tech",
-          "category_label": "科技",
-          "observed_at": "2026-11-28T03:19:25Z"
-        },
-        {
-          "platform": "tieba",
-          "platform_label": "贴吧",
-          "platform_short": "贴吧",
-          "platform_color": "#4e6ef2",
-          "external_id": "28370464",
-          "title": "陈睿称B站不受短剧影响",
-          "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370464&topic_name=%E9%99%88%E7%9D%BF%E7%A7%B0B%E7%AB%99%E4%B8%8D%E5%8F%97%E7%9F%AD%E5%89%A7%E5%BD%B1%E5%93%8D",
-          "rank": 4,
-          "hot_value": 2093202.0,
-          "score": 76.94,
+          "hot_value": 1190124.0,
+          "score": 71.14,
           "trend": "falling",
           "trend_label": "降温",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:25Z"
+          "observed_at": "2026-11-28T15:31:49Z"
         }
       ]
     },
@@ -524,13 +524,13 @@
       "count": 0,
       "last_seen": null,
       "last_run": {
-        "id": 17,
+        "id": 23,
         "platform": "reddit",
         "status": "failed",
         "item_count": 0,
-        "duration_ms": 42,
-        "started_at": "2026-11-28T03:19:24Z",
-        "finished_at": "2026-11-28T03:19:24Z",
+        "duration_ms": 236,
+        "started_at": "2026-11-28T15:31:49Z",
+        "finished_at": "2026-11-28T15:31:49Z",
         "source": null
       },
       "top": []
@@ -544,15 +544,15 @@
       "enabled": true,
       "weight": 1.0,
       "count": 16,
-      "last_seen": "2026-11-28T03:19:26Z",
+      "last_seen": "2026-11-28T15:31:50Z",
       "last_run": {
-        "id": 18,
+        "id": 24,
         "platform": "github",
         "status": "success",
         "item_count": 16,
-        "duration_ms": 1174,
-        "started_at": "2026-11-28T03:19:24Z",
-        "finished_at": "2026-11-28T03:19:26Z",
+        "duration_ms": 1466,
+        "started_at": "2026-11-28T15:31:49Z",
+        "finished_at": "2026-11-28T15:31:50Z",
         "source": "trending-daily"
       },
       "top": [
@@ -565,13 +565,13 @@
           "title": "elementalsouls/Claude-BugHunter",
           "url": "https://github.com/elementalsouls/Claude-BugHunter",
           "rank": 1,
-          "hot_value": 1608.0,
+          "hot_value": 1372.0,
           "score": 92.5,
           "trend": "steady",
           "trend_label": "持平",
           "category": "tech",
           "category_label": "科技",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         },
         {
           "platform": "github",
@@ -582,13 +582,13 @@
           "title": "obra/superpowers",
           "url": "https://github.com/obra/superpowers",
           "rank": 2,
-          "hot_value": 922.0,
-          "score": 86.58,
+          "hot_value": 809.0,
+          "score": 86.64,
           "trend": "steady",
           "trend_label": "持平",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         },
         {
           "platform": "github",
@@ -599,13 +599,13 @@
           "title": "HKUDS/CLI-Anything",
           "url": "https://github.com/HKUDS/CLI-Anything",
           "rank": 3,
-          "hot_value": 666.0,
-          "score": 81.59,
+          "hot_value": 561.0,
+          "score": 81.46,
           "trend": "steady",
           "trend_label": "持平",
           "category": "tech",
           "category_label": "科技",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         },
         {
           "platform": "github",
@@ -616,13 +616,13 @@
           "title": "jingyaogong/minimind",
           "url": "https://github.com/jingyaogong/minimind",
           "rank": 4,
-          "hot_value": 660.0,
-          "score": 77.89,
+          "hot_value": 391.0,
+          "score": 76.3,
           "trend": "steady",
           "trend_label": "持平",
           "category": "tech",
           "category_label": "科技",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         },
         {
           "platform": "github",
@@ -633,13 +633,13 @@
           "title": "firecrawl/firecrawl",
           "url": "https://github.com/firecrawl/firecrawl",
           "rank": 6,
-          "hot_value": 822.0,
-          "score": 71.44,
+          "hot_value": 717.0,
+          "score": 71.47,
           "trend": "steady",
           "trend_label": "持平",
           "category": "other",
           "category_label": "其他",
-          "observed_at": "2026-11-28T03:19:26Z"
+          "observed_at": "2026-11-28T15:31:50Z"
         }
       ]
     }
@@ -684,28 +684,28 @@
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
-      "external_id": "2768778",
-      "title": "詹姆斯开场三分3连中",
-      "url": "https://www.douyin.com/search/%E8%A9%B9%E5%A7%86%E6%96%AF%E5%BC%80%E5%9C%BA%E4%B8%89%E5%88%863%E8%BF%9E%E4%B8%AD",
+      "external_id": "2768708",
+      "title": "U17国足将迎战塞尔维亚",
+      "url": "https://www.douyin.com/search/U17%E5%9B%BD%E8%B6%B3%E5%B0%86%E8%BF%8E%E6%88%98%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A",
       "rank": 2,
-      "hot_value": 11545986.0,
+      "hot_value": 10817477.0,
       "score": 100.0,
-      "trend": "new",
-      "trend_label": "新上榜",
+      "trend": "rising",
+      "trend_label": "升温",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
-      "external_id": "2768708",
-      "title": "U17国足将迎战塞尔维亚",
-      "url": "https://www.douyin.com/search/U17%E5%9B%BD%E8%B6%B3%E5%B0%86%E8%BF%8E%E6%88%98%E5%A1%9E%E5%B0%94%E7%BB%B4%E4%BA%9A",
-      "rank": 3,
-      "hot_value": 11258335.0,
+      "external_id": "2768778",
+      "title": "詹姆斯开场三分3连中",
+      "url": "https://www.douyin.com/search/%E8%A9%B9%E5%A7%86%E6%96%AF%E5%BC%80%E5%9C%BA%E4%B8%89%E5%88%863%E8%BF%9E%E4%B8%AD",
+      "rank": 2,
+      "hot_value": 11545986.0,
       "score": 100.0,
       "trend": "new",
       "trend_label": "新上榜",
@@ -729,6 +729,23 @@
       "category": "finance",
       "category_label": "财经",
       "observed_at": "2026-11-28T03:19:25Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2769547",
+      "title": "神23和神24航天员完成在轨交接",
+      "url": "https://www.douyin.com/search/%E7%A5%9E23%E5%92%8C%E7%A5%9E24%E8%88%AA%E5%A4%A9%E5%91%98%E5%AE%8C%E6%88%90%E5%9C%A8%E8%BD%A8%E4%BA%A4%E6%8E%A5",
+      "rank": 4,
+      "hot_value": 10730499.0,
+      "score": 98.04,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -763,6 +780,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T18:59:02Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2110027159284863346",
+      "title": "怎么看DeepSeek 将多个核心算子优化至华为昇腾 950 的硬件极限，这对国产算力意味着什么？",
+      "url": "https://www.zhihu.com/question/2110027159284863346",
+      "rank": 1,
+      "hot_value": 15820000.0,
+      "score": 96.77,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -833,6 +867,23 @@
       "observed_at": "2026-11-28T03:19:24Z"
     },
     {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2767191",
+      "title": "淡人穿出时髦感的冬季穿搭",
+      "url": "https://www.douyin.com/search/%E6%B7%A1%E4%BA%BA%E7%A9%BF%E5%87%BA%E6%97%B6%E9%AB%A6%E6%84%9F%E7%9A%84%E5%86%AC%E5%AD%A3%E7%A9%BF%E6%90%AD",
+      "rank": 3,
+      "hot_value": 10750829.0,
+      "score": 93.23,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "lifestyle",
+      "category_label": "生活",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
       "platform": "github",
       "platform_label": "GitHub",
       "platform_short": "GitHub",
@@ -841,13 +892,30 @@
       "title": "elementalsouls/Claude-BugHunter",
       "url": "https://github.com/elementalsouls/Claude-BugHunter",
       "rank": 1,
-      "hot_value": 1608.0,
+      "hot_value": 1372.0,
       "score": 92.5,
       "trend": "steady",
       "trend_label": "持平",
       "category": "tech",
       "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2768725",
+      "title": "坐火车的正确打开方式",
+      "url": "https://www.douyin.com/search/%E5%9D%90%E7%81%AB%E8%BD%A6%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F",
+      "rank": 5,
+      "hot_value": 10202220.0,
+      "score": 92.19,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -888,6 +956,23 @@
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
+      "external_id": "2769319",
+      "title": "巴方官员同巴基斯坦航天员通话",
+      "url": "https://www.douyin.com/search/%E5%B7%B4%E6%96%B9%E5%AE%98%E5%91%98%E5%90%8C%E5%B7%B4%E5%9F%BA%E6%96%AF%E5%9D%A6%E8%88%AA%E5%A4%A9%E5%91%98%E9%80%9A%E8%AF%9D",
+      "rank": 6,
+      "hot_value": 9609028.0,
+      "score": 90.91,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
       "external_id": "2767222",
       "title": "今日起电视开机广告没了",
       "url": "https://www.douyin.com/search/%E4%BB%8A%E6%97%A5%E8%B5%B7%E7%94%B5%E8%A7%86%E5%BC%80%E6%9C%BA%E5%B9%BF%E5%91%8A%E6%B2%A1%E4%BA%86",
@@ -909,30 +994,13 @@
       "title": "《下一个是谁》第七季（6）",
       "url": "https://www.bilibili.com/video/BV15Q1WzRENh",
       "rank": 1,
-      "hot_value": 1422319.0,
-      "score": 90.21,
+      "hot_value": 2463660.0,
+      "score": 89.03,
       "trend": "steady",
       "trend_label": "持平",
       "category": "gaming",
       "category_label": "游戏",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "douyin",
-      "platform_label": "抖音",
-      "platform_short": "抖音",
-      "platform_color": "#fe2c55",
-      "external_id": "2767191",
-      "title": "淡人穿出时髦感的冬季穿搭",
-      "url": "https://www.douyin.com/search/%E6%B7%A1%E4%BA%BA%E7%A9%BF%E5%87%BA%E6%97%B6%E9%AB%A6%E6%84%9F%E7%9A%84%E5%86%AC%E5%AD%A3%E7%A9%BF%E6%90%AD",
-      "rank": 5,
-      "hot_value": 11065355.0,
-      "score": 89.56,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "lifestyle",
-      "category_label": "生活",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -956,17 +1024,17 @@
       "platform_label": "贴吧",
       "platform_short": "贴吧",
       "platform_color": "#4e6ef2",
-      "external_id": "28370483",
-      "title": "左手亲口给杰克平反",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370483&topic_name=%E5%B7%A6%E6%89%8B%E4%BA%B2%E5%8F%A3%E7%BB%99%E6%9D%B0%E5%85%8B%E5%B9%B3%E5%8F%8D",
+      "external_id": "28370536",
+      "title": "千问认领二创拟人形象",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370536&topic_name=%E5%8D%83%E9%97%AE%E8%AE%A4%E9%A2%86%E4%BA%8C%E5%88%9B%E6%8B%9F%E4%BA%BA%E5%BD%A2%E8%B1%A1",
       "rank": 1,
-      "hot_value": 2637300.0,
-      "score": 88.65,
+      "hot_value": 2827170.0,
+      "score": 88.54,
       "trend": "new",
       "trend_label": "新上榜",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -986,6 +1054,23 @@
       "observed_at": "2026-11-28T03:19:25Z"
     },
     {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "obra/superpowers",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "rank": 2,
+      "hot_value": 809.0,
+      "score": 86.64,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "douyin",
       "platform_label": "抖音",
       "platform_short": "抖音",
@@ -1001,40 +1086,6 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T18:59:02Z"
-    },
-    {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "obra/superpowers",
-      "title": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "rank": 2,
-      "hot_value": 922.0,
-      "score": 86.58,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "zhihu",
-      "platform_label": "知乎",
-      "platform_short": "知乎",
-      "platform_color": "#056de8",
-      "external_id": "2109585824480236082",
-      "title": "如何看待女子称因年龄超 40 岁被酒店拒绝入住？预订平台没有醒目提示，这种规定合法吗？",
-      "url": "https://www.zhihu.com/question/2109585824480236082",
-      "rank": 3,
-      "hot_value": 4490000.0,
-      "score": 86.34,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "society",
-      "category_label": "社会",
-      "observed_at": "2026-11-28T03:19:24Z"
     },
     {
       "platform": "zhihu",
@@ -1071,23 +1122,6 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370485",
-      "title": "丝之歌DLC真定档了",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370485&topic_name=%E4%B8%9D%E4%B9%8B%E6%AD%8CDLC%E7%9C%9F%E5%AE%9A%E6%A1%A3%E4%BA%86",
-      "rank": 2,
-      "hot_value": 2556930.0,
-      "score": 86.15,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
       "platform": "douyin",
       "platform_label": "抖音",
       "platform_short": "抖音",
@@ -1122,23 +1156,6 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "douyin",
-      "platform_label": "抖音",
-      "platform_short": "抖音",
-      "platform_color": "#fe2c55",
-      "external_id": "2767661",
-      "title": "冬天来一口榴莲炒冰夯爆了",
-      "url": "https://www.douyin.com/search/%E5%86%AC%E5%A4%A9%E6%9D%A5%E4%B8%80%E5%8F%A3%E6%A6%B4%E8%8E%B2%E7%82%92%E5%86%B0%E5%A4%AF%E7%88%86%E4%BA%86",
-      "rank": 7,
-      "hot_value": 10452333.0,
-      "score": 84.22,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -1156,21 +1173,21 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "douyin",
-      "platform_label": "抖音",
-      "platform_short": "抖音",
-      "platform_color": "#fe2c55",
-      "external_id": "2768652",
-      "title": "U17世界杯16强对阵正式出炉",
-      "url": "https://www.douyin.com/search/U17%E4%B8%96%E7%95%8C%E6%9D%AF16%E5%BC%BA%E5%AF%B9%E9%98%B5%E6%AD%A3%E5%BC%8F%E5%87%BA%E7%82%89",
-      "rank": 9,
-      "hot_value": 9306937.0,
-      "score": 83.88,
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370541",
+      "title": "小孩3比0送走曾家镇",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370541&topic_name=%E5%B0%8F%E5%AD%A93%E6%AF%940%E9%80%81%E8%B5%B0%E6%9B%BE%E5%AE%B6%E9%95%87",
+      "rank": 3,
+      "hot_value": 1948520.0,
+      "score": 82.95,
       "trend": "new",
       "trend_label": "新上榜",
       "category": "sports",
       "category_label": "体育",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -1190,6 +1207,57 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109199188017635797",
+      "title": "安徽、上海等地借助 AI 抓贪官，具体是怎么抓的？有哪些优点和局限性？该如何应对不断变化的作案手法？",
+      "url": "https://www.zhihu.com/question/2109199188017635797",
+      "rank": 2,
+      "hot_value": 5350000.0,
+      "score": 82.56,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370483",
+      "title": "左手亲口给杰克平反",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370483&topic_name=%E5%B7%A6%E6%89%8B%E4%BA%B2%E5%8F%A3%E7%BB%99%E6%9D%B0%E5%85%8B%E5%B9%B3%E5%8F%8D",
+      "rank": 2,
+      "hot_value": 2764019.0,
+      "score": 82.4,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109585824480236082",
+      "title": "如何看待女子称因年龄超 40 岁被酒店拒绝入住？预订平台没有醒目提示，这种规定合法吗？",
+      "url": "https://www.zhihu.com/question/2109585824480236082",
+      "rank": 3,
+      "hot_value": 5250000.0,
+      "score": 82.27,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "society",
+      "category_label": "社会",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "bilibili",
       "platform_label": "Bilibili",
       "platform_short": "B站",
@@ -1198,13 +1266,13 @@
       "title": "吴 众",
       "url": "https://www.bilibili.com/video/BV1xvykzsEPv",
       "rank": 2,
-      "hot_value": 2972221.0,
-      "score": 81.95,
-      "trend": "rising",
-      "trend_label": "升温",
+      "hot_value": 3293634.0,
+      "score": 81.96,
+      "trend": "steady",
+      "trend_label": "持平",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "github",
@@ -1215,13 +1283,13 @@
       "title": "HKUDS/CLI-Anything",
       "url": "https://github.com/HKUDS/CLI-Anything",
       "rank": 3,
-      "hot_value": 666.0,
-      "score": 81.59,
+      "hot_value": 561.0,
+      "score": 81.46,
       "trend": "steady",
       "trend_label": "持平",
       "category": "tech",
       "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "bilibili",
@@ -1241,6 +1309,23 @@
       "observed_at": "2026-11-27T06:17:07Z"
     },
     {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2767377",
+      "title": "拿破仑夹克轻松拿捏秋冬混搭风",
+      "url": "https://www.douyin.com/search/%E6%8B%BF%E7%A0%B4%E4%BB%91%E5%A4%B9%E5%85%8B%E8%BD%BB%E6%9D%BE%E6%8B%BF%E6%8D%8F%E7%A7%8B%E5%86%AC%E6%B7%B7%E6%90%AD%E9%A3%8E",
+      "rank": 7,
+      "hot_value": 9471607.0,
+      "score": 81.18,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -1258,38 +1343,21 @@
       "observed_at": "2026-11-28T03:19:24Z"
     },
     {
-      "platform": "douyin",
-      "platform_label": "抖音",
-      "platform_short": "抖音",
-      "platform_color": "#fe2c55",
-      "external_id": "2767377",
-      "title": "拿破仑夹克轻松拿捏秋冬混搭风",
-      "url": "https://www.douyin.com/search/%E6%8B%BF%E7%A0%B4%E4%BB%91%E5%A4%B9%E5%85%8B%E8%BD%BB%E6%9D%BE%E6%8B%BF%E6%8D%8F%E7%A7%8B%E5%86%AC%E6%B7%B7%E6%90%AD%E9%A3%8E",
-      "rank": 8,
-      "hot_value": 9342922.0,
-      "score": 80.57,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370473",
-      "title": "塔赞被韩国追缴1800万税款",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370473&topic_name=%E5%A1%94%E8%B5%9E%E8%A2%AB%E9%9F%A9%E5%9B%BD%E8%BF%BD%E7%BC%B41800%E4%B8%87%E7%A8%8E%E6%AC%BE",
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV11AyUz6E6h",
+      "title": "长得帅就要被网爆么?",
+      "url": "https://www.bilibili.com/video/BV11AyUz6E6h",
       "rank": 3,
-      "hot_value": 2282532.0,
-      "score": 80.47,
-      "trend": "falling",
-      "trend_label": "降温",
+      "hot_value": 2942258.0,
+      "score": 80.38,
+      "trend": "rising",
+      "trend_label": "升温",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "bilibili",
@@ -1309,23 +1377,6 @@
       "observed_at": "2026-11-27T06:17:07Z"
     },
     {
-      "platform": "zhihu",
-      "platform_label": "知乎",
-      "platform_short": "知乎",
-      "platform_color": "#056de8",
-      "external_id": "2109242936701478494",
-      "title": "模特七海发博表示 「我的脸已经成 AI 短剧里的赛博恶役」，AI 融脸为什么维权难？",
-      "url": "https://www.zhihu.com/question/2109242936701478494",
-      "rank": 4,
-      "hot_value": 2910000.0,
-      "score": 79.14,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:24Z"
-    },
-    {
       "platform": "bilibili",
       "platform_label": "Bilibili",
       "platform_short": "B站",
@@ -1343,6 +1394,40 @@
       "observed_at": "2026-11-28T03:19:26Z"
     },
     {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2769317",
+      "title": "俄乌两军冬季战前补给成重中之重",
+      "url": "https://www.douyin.com/search/%E4%BF%84%E4%B9%8C%E4%B8%A4%E5%86%9B%E5%86%AC%E5%AD%A3%E6%88%98%E5%89%8D%E8%A1%A5%E7%BB%99%E6%88%90%E9%87%8D%E4%B8%AD%E4%B9%8B%E9%87%8D",
+      "rank": 10,
+      "hot_value": 8123328.0,
+      "score": 78.46,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV13T1JzuEeJ",
+      "title": "刷新新地点~再三声明！选择中文和日文，无任何不良引导！！",
+      "url": "https://www.bilibili.com/video/BV13T1JzuEeJ",
+      "rank": 4,
+      "hot_value": 3311746.0,
+      "score": 78.3,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -1358,6 +1443,23 @@
       "category": "finance",
       "category_label": "财经",
       "observed_at": "2026-11-27T06:17:06Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2767661",
+      "title": "冬天来一口榴莲炒冰夯爆了",
+      "url": "https://www.douyin.com/search/%E5%86%AC%E5%A4%A9%E6%9D%A5%E4%B8%80%E5%8F%A3%E6%A6%B4%E8%8E%B2%E7%82%92%E5%86%B0%E5%A4%AF%E7%88%86%E4%BA%86",
+      "rank": 8,
+      "hot_value": 8415696.0,
+      "score": 78.19,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "zhihu",
@@ -1394,40 +1496,6 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "jingyaogong/minimind",
-      "title": "jingyaogong/minimind",
-      "url": "https://github.com/jingyaogong/minimind",
-      "rank": 4,
-      "hot_value": 660.0,
-      "score": 77.89,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370487",
-      "title": "男子被困山洞扔手机发出求救",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370487&topic_name=%E7%94%B7%E5%AD%90%E8%A2%AB%E5%9B%B0%E5%B1%B1%E6%B4%9E%E6%89%94%E6%89%8B%E6%9C%BA%E5%8F%91%E5%87%BA%E6%B1%82%E6%95%91",
-      "rank": 5,
-      "hot_value": 1540526.0,
-      "score": 77.72,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -1445,21 +1513,21 @@
       "observed_at": "2026-11-28T03:19:24Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370464",
-      "title": "陈睿称B站不受短剧影响",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370464&topic_name=%E9%99%88%E7%9D%BF%E7%A7%B0B%E7%AB%99%E4%B8%8D%E5%8F%97%E7%9F%AD%E5%89%A7%E5%BD%B1%E5%93%8D",
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109360222162764060",
+      "title": "如何看待省文科状元石松称同窗年薪百万，自己月光，普通人参加文科高考的出路是什么?",
+      "url": "https://www.zhihu.com/question/2109360222162764060",
       "rank": 4,
-      "hot_value": 2093202.0,
-      "score": 76.94,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "hot_value": 3940000.0,
+      "score": 77.09,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "education",
+      "category_label": "教育",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -1496,6 +1564,40 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "jingyaogong/minimind",
+      "title": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "rank": 4,
+      "hot_value": 391.0,
+      "score": 76.3,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370485",
+      "title": "丝之歌DLC真定档了",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370485&topic_name=%E4%B8%9D%E4%B9%8B%E6%AD%8CDLC%E7%9C%9F%E5%AE%9A%E6%A1%A3%E4%BA%86",
+      "rank": 4,
+      "hot_value": 1509867.0,
+      "score": 76.2,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -1511,6 +1613,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:06Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1or1HzXEi1",
+      "title": "《绝区零》挽昼动画短片 | 最后的旅途",
+      "url": "https://www.bilibili.com/video/BV1or1HzXEi1",
+      "rank": 5,
+      "hot_value": 1902631.0,
+      "score": 75.95,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -1530,21 +1649,38 @@
       "observed_at": "2026-11-28T03:19:25Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV11AyUz6E6h",
-      "title": "长得帅就要被网爆么?",
-      "url": "https://www.bilibili.com/video/BV11AyUz6E6h",
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2770135",
+      "title": "余秀华现身许飞杭州演唱会",
+      "url": "https://www.douyin.com/search/%E4%BD%99%E7%A7%80%E5%8D%8E%E7%8E%B0%E8%BA%AB%E8%AE%B8%E9%A3%9E%E6%9D%AD%E5%B7%9E%E6%BC%94%E5%94%B1%E4%BC%9A",
+      "rank": 12,
+      "hot_value": 7868315.0,
+      "score": 75.53,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109560773571777098",
+      "title": "如果把天山凿一个洞，让大西洋水汽进来，能否让新疆变成塞上江南？",
+      "url": "https://www.zhihu.com/question/2109560773571777098",
       "rank": 5,
-      "hot_value": 2473430.0,
-      "score": 75.09,
-      "trend": "steady",
-      "trend_label": "持平",
+      "hot_value": 2870000.0,
+      "score": 75.16,
+      "trend": "new",
+      "trend_label": "新上榜",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -1568,6 +1704,23 @@
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
+      "external_id": "2767062",
+      "title": "冬装和冷空气一起到货了",
+      "url": "https://www.douyin.com/search/%E5%86%AC%E8%A3%85%E5%92%8C%E5%86%B7%E7%A9%BA%E6%B0%94%E4%B8%80%E8%B5%B7%E5%88%B0%E8%B4%A7%E4%BA%86",
+      "rank": 9,
+      "hot_value": 8392416.0,
+      "score": 74.42,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
       "external_id": "2766884",
       "title": "羊年贵金属纪念币今日发行",
       "url": "https://www.douyin.com/search/%E7%BE%8A%E5%B9%B4%E8%B4%B5%E9%87%91%E5%B1%9E%E7%BA%AA%E5%BF%B5%E5%B8%81%E4%BB%8A%E6%97%A5%E5%8F%91%E8%A1%8C",
@@ -1579,23 +1732,6 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:06Z"
-    },
-    {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV11yyZzeET3",
-      "title": "“为人民服务”",
-      "url": "https://www.bilibili.com/video/BV11yyZzeET3",
-      "rank": 4,
-      "hot_value": 1435815.0,
-      "score": 73.64,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
     },
     {
       "platform": "zhihu",
@@ -1613,6 +1749,40 @@
       "category": "finance",
       "category_label": "财经",
       "observed_at": "2026-11-28T03:19:24Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2768672",
+      "title": "金银价格双双上涨",
+      "url": "https://www.douyin.com/search/%E9%87%91%E9%93%B6%E4%BB%B7%E6%A0%BC%E5%8F%8C%E5%8F%8C%E4%B8%8A%E6%B6%A8",
+      "rank": 11,
+      "hot_value": 7969272.0,
+      "score": 73.3,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109732540470620377",
+      "title": "曝一大厂裁员谈判时用信号干扰器防员工录音，录音能通过技术手段恢复正常吗？碰到这种情况员工如何维权？",
+      "url": "https://www.zhihu.com/question/2109732540470620377",
+      "rank": 6,
+      "hot_value": 1810000.0,
+      "score": 73.3,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -1674,30 +1844,30 @@
       "title": "firecrawl/firecrawl",
       "url": "https://github.com/firecrawl/firecrawl",
       "rank": 6,
-      "hot_value": 822.0,
-      "score": 71.44,
+      "hot_value": 717.0,
+      "score": 71.47,
       "trend": "steady",
       "trend_label": "持平",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV1tCyzzpEB6",
-      "title": "去了一趟纽约。",
-      "url": "https://www.bilibili.com/video/BV1tCyzzpEB6",
-      "rank": 6,
-      "hot_value": 3698736.0,
-      "score": 70.73,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370473",
+      "title": "塔赞被韩国追缴1800万税款",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370473&topic_name=%E5%A1%94%E8%B5%9E%E8%A2%AB%E9%9F%A9%E5%9B%BD%E8%BF%BD%E7%BC%B41800%E4%B8%87%E7%A8%8E%E6%AC%BE",
+      "rank": 5,
+      "hot_value": 1190124.0,
+      "score": 71.14,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "github",
@@ -1708,13 +1878,30 @@
       "title": "cursor/plugins",
       "url": "https://github.com/cursor/plugins",
       "rank": 5,
-      "hot_value": 243.0,
-      "score": 70.17,
+      "hot_value": 214.0,
+      "score": 70.13,
       "trend": "steady",
       "trend_label": "持平",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109719982065940065",
+      "title": "央行《大额存单管理办法》公布，个人投资人认购大额存单起点降为不低于10万元，如何解读？将带来哪些影响？",
+      "url": "https://www.zhihu.com/question/2109719982065940065",
+      "rank": 7,
+      "hot_value": 1520000.0,
+      "score": 69.93,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "society",
+      "category_label": "社会",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -1734,21 +1921,55 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370332",
-      "title": "GTA6破解移植进度飞速",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370332&topic_name=GTA6%E7%A0%B4%E8%A7%A3%E7%A7%BB%E6%A4%8D%E8%BF%9B%E5%BA%A6%E9%A3%9E%E9%80%9F",
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1euy6zeEDx",
+      "title": "“MJ宇宙之最正能量的一集”",
+      "url": "https://www.bilibili.com/video/BV1euy6zeEDx",
       "rank": 6,
-      "hot_value": 1411775.0,
-      "score": 68.76,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "hot_value": 2026775.0,
+      "score": 69.36,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2769231",
+      "title": "马刺逆转湖人",
+      "url": "https://www.douyin.com/search/%E9%A9%AC%E5%88%BA%E9%80%86%E8%BD%AC%E6%B9%96%E4%BA%BA",
+      "rank": 13,
+      "hot_value": 7845521.0,
+      "score": 69.07,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2769959",
+      "title": "绵竹辟谣“多次违停也要去烤肉店”",
+      "url": "https://www.douyin.com/search/%E7%BB%B5%E7%AB%B9%E8%BE%9F%E8%B0%A3%E2%80%9C%E5%A4%9A%E6%AC%A1%E8%BF%9D%E5%81%9C%E4%B9%9F%E8%A6%81%E5%8E%BB%E7%83%A4%E8%82%89%E5%BA%97%E2%80%9D",
+      "rank": 14,
+      "hot_value": 7841132.0,
+      "score": 68.58,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "zhihu",
@@ -1768,21 +1989,38 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV1UByzzRE4K",
-      "title": "《蓝色星原：旅谣》公测版本PV | 星跃始动",
-      "url": "https://www.bilibili.com/video/BV1UByzzRE4K",
-      "rank": 8,
-      "hot_value": 7703299.0,
-      "score": 67.52,
-      "trend": "rising",
-      "trend_label": "升温",
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370464",
+      "title": "陈睿称B站不受短剧影响",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370464&topic_name=%E9%99%88%E7%9D%BF%E7%A7%B0B%E7%AB%99%E4%B8%8D%E5%8F%97%E7%9F%AD%E5%89%A7%E5%BD%B1%E5%93%8D",
+      "rank": 6,
+      "hot_value": 905450.0,
+      "score": 67.5,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370487",
+      "title": "男子被困山洞扔手机发出求救",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370487&topic_name=%E7%94%B7%E5%AD%90%E8%A2%AB%E5%9B%B0%E5%B1%B1%E6%B4%9E%E6%89%94%E6%89%8B%E6%9C%BA%E5%8F%91%E5%87%BA%E6%B1%82%E6%95%91",
+      "rank": 7,
+      "hot_value": 759912.0,
+      "score": 67.36,
+      "trend": "falling",
+      "trend_label": "降温",
       "category": "tech",
       "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -1802,23 +2040,6 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV1euy6zeEDx",
-      "title": "“MJ宇宙之最正能量的一集”",
-      "url": "https://www.bilibili.com/video/BV1euy6zeEDx",
-      "rank": 7,
-      "hot_value": 1957822.0,
-      "score": 66.55,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
       "platform": "douyin",
       "platform_label": "抖音",
       "platform_short": "抖音",
@@ -1836,21 +2057,21 @@
       "observed_at": "2026-11-28T03:19:25Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370342",
-      "title": "Viper离队直播On当场落泪",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370342&topic_name=Viper%E7%A6%BB%E9%98%9F%E7%9B%B4%E6%92%ADOn%E5%BD%93%E5%9C%BA%E8%90%BD%E6%B3%AA",
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV11yyZzeET3",
+      "title": "“为人民服务”",
+      "url": "https://www.bilibili.com/video/BV11yyZzeET3",
       "rank": 7,
-      "hot_value": 1157544.0,
-      "score": 66.08,
+      "hot_value": 1691255.0,
+      "score": 65.4,
       "trend": "falling",
       "trend_label": "降温",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -1868,6 +2089,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:06Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1tCyzzpEB6",
+      "title": "去了一趟纽约。",
+      "url": "https://www.bilibili.com/video/BV1tCyzzpEB6",
+      "rank": 8,
+      "hot_value": 4324206.0,
+      "score": 65.07,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -1902,6 +2140,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-28T03:19:25Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1UByzzRE4K",
+      "title": "《蓝色星原：旅谣》公测版本PV | 星跃始动",
+      "url": "https://www.bilibili.com/video/BV1UByzzRE4K",
+      "rank": 9,
+      "hot_value": 8650818.0,
+      "score": 64.34,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -1955,6 +2210,23 @@
       "observed_at": "2026-11-27T06:17:07Z"
     },
     {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2768935",
+      "title": "歼35A首次近距离展示",
+      "url": "https://www.douyin.com/search/%E6%AD%BC35A%E9%A6%96%E6%AC%A1%E8%BF%91%E8%B7%9D%E7%A6%BB%E5%B1%95%E7%A4%BA",
+      "rank": 15,
+      "hot_value": 7808479.0,
+      "score": 61.98,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -1972,21 +2244,21 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370324",
-      "title": "知名UP主瓶子君官宣结婚",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370324&topic_name=%E7%9F%A5%E5%90%8DUP%E4%B8%BB%E7%93%B6%E5%AD%90%E5%90%9B%E5%AE%98%E5%AE%A3%E7%BB%93%E5%A9%9A",
-      "rank": 8,
-      "hot_value": 1072927.0,
-      "score": 61.21,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109929626264760542",
+      "title": "董明珠直播中数次训斥员工，魏建军帮忙解围，怎样看待魏建军的处理和董明珠对员工的管理方式？",
+      "url": "https://www.zhihu.com/question/2109929626264760542",
+      "rank": 11,
+      "hot_value": 1490000.0,
+      "score": 61.54,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -2031,30 +2303,64 @@
       "title": "nginx/nginx",
       "url": "https://github.com/nginx/nginx",
       "rank": 7,
-      "hot_value": 146.0,
+      "hot_value": 131.0,
       "score": 60.78,
       "trend": "steady",
       "trend_label": "持平",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "483257090",
+      "title": "老版《西游记》里车迟国一战，为什么孙悟空会不认得三清雕像？",
+      "url": "https://www.zhihu.com/question/483257090",
+      "rank": 8,
+      "hot_value": 1500000.0,
+      "score": 60.47,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109278882310223800",
+      "title": "马伯庸回应电视剧《两京十五日》争议，自己是用历史逻辑反推朱瞻基的来时路，如何看待这一创作方法？",
+      "url": "https://www.zhihu.com/question/2109278882310223800",
+      "rank": 9,
+      "hot_value": 1500000.0,
+      "score": 60.39,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "tieba",
       "platform_label": "贴吧",
       "platform_short": "贴吧",
       "platform_color": "#4e6ef2",
-      "external_id": "28370343",
-      "title": "国考漏报名被老父提刀家暴",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370343&topic_name=%E5%9B%BD%E8%80%83%E6%BC%8F%E6%8A%A5%E5%90%8D%E8%A2%AB%E8%80%81%E7%88%B6%E6%8F%90%E5%88%80%E5%AE%B6%E6%9A%B4",
-      "rank": 9,
-      "hot_value": 922614.0,
-      "score": 60.68,
+      "external_id": "28370332",
+      "title": "GTA6破解移植进度飞速",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370332&topic_name=GTA6%E7%A0%B4%E8%A7%A3%E7%A7%BB%E6%A4%8D%E8%BF%9B%E5%BA%A6%E9%A3%9E%E9%80%9F",
+      "rank": 8,
+      "hot_value": 733309.0,
+      "score": 60.33,
       "trend": "falling",
       "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "zhihu",
@@ -2091,21 +2397,21 @@
       "observed_at": "2026-11-28T03:19:26Z"
     },
     {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "cathrynlavery/diagram-design",
-      "title": "cathrynlavery/diagram-design",
-      "url": "https://github.com/cathrynlavery/diagram-design",
-      "rank": 9,
-      "hot_value": 725.0,
-      "score": 59.93,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109991849590875008",
+      "title": "浙江一地被曝开始推行「1+5」模式，初中只读一年，就直接读高中课程，是真的吗？这种模式对学生真的好吗？",
+      "url": "https://www.zhihu.com/question/2109991849590875008",
+      "rank": 12,
+      "hot_value": 1490000.0,
+      "score": 59.88,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "education",
+      "category_label": "教育",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -2125,21 +2431,38 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370365",
-      "title": "吧友反问AI是否懂人味",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370365&topic_name=%E5%90%A7%E5%8F%8B%E5%8F%8D%E9%97%AEAI%E6%98%AF%E5%90%A6%E6%87%82%E4%BA%BA%E5%91%B3",
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1dj1EzVE4L",
+      "title": "吓哭了！华山长空栈道是人爬的？和有山挑战天下第一奇险",
+      "url": "https://www.bilibili.com/video/BV1dj1EzVE4L",
       "rank": 10,
-      "hot_value": 914382.0,
-      "score": 58.9,
-      "trend": "falling",
-      "trend_label": "降温",
+      "hot_value": 1888992.0,
+      "score": 59.34,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "cathrynlavery/diagram-design",
+      "title": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "rank": 9,
+      "hot_value": 499.0,
+      "score": 58.97,
+      "trend": "steady",
+      "trend_label": "持平",
       "category": "tech",
       "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -2197,6 +2520,40 @@
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
+      "external_id": "2769572",
+      "title": "独牙200万柯秉中夺冠",
+      "url": "https://www.douyin.com/search/%E7%8B%AC%E7%89%99200%E4%B8%87%E6%9F%AF%E7%A7%89%E4%B8%AD%E5%A4%BA%E5%86%A0",
+      "rank": 17,
+      "hot_value": 7790681.0,
+      "score": 58.15,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2768652",
+      "title": "U17世界杯1/16决赛对阵出炉",
+      "url": "https://www.douyin.com/search/U17%E4%B8%96%E7%95%8C%E6%9D%AF1/16%E5%86%B3%E8%B5%9B%E5%AF%B9%E9%98%B5%E5%87%BA%E7%82%89",
+      "rank": 16,
+      "hot_value": 7790695.0,
+      "score": 58.01,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "sports",
+      "category_label": "体育",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
       "external_id": "2766707",
       "title": "换我画地为牢了",
       "url": "https://www.douyin.com/search/%E6%8D%A2%E6%88%91%E7%94%BB%E5%9C%B0%E4%B8%BA%E7%89%A2%E4%BA%86",
@@ -2208,6 +2565,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:06Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370342",
+      "title": "Viper离队直播On当场落泪",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370342&topic_name=Viper%E7%A6%BB%E9%98%9F%E7%9B%B4%E6%92%ADOn%E5%BD%93%E5%9C%BA%E8%90%BD%E6%B3%AA",
+      "rank": 9,
+      "hot_value": 685058.0,
+      "score": 57.8,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -2227,6 +2601,23 @@
       "observed_at": "2026-11-28T03:19:25Z"
     },
     {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109980344484982911",
+      "title": "梁靖崑将赴俄超打球，怎样看待他的选择？对他职业生涯发展有哪些影响？",
+      "url": "https://www.zhihu.com/question/2109980344484982911",
+      "rank": 13,
+      "hot_value": 1380000.0,
+      "score": 56.61,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "sports",
+      "category_label": "体育",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "github",
       "platform_label": "GitHub",
       "platform_short": "GitHub",
@@ -2235,64 +2626,13 @@
       "title": "openvinotoolkit/openvino",
       "url": "https://github.com/openvinotoolkit/openvino",
       "rank": 8,
-      "hot_value": 151.0,
-      "score": 57.25,
+      "hot_value": 111.0,
+      "score": 56.43,
       "trend": "steady",
       "trend_label": "持平",
       "category": "tech",
       "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV1dj1EzVE4L",
-      "title": "吓哭了！华山长空栈道是人爬的？和有山挑战天下第一奇险",
-      "url": "https://www.bilibili.com/video/BV1dj1EzVE4L",
-      "rank": 11,
-      "hot_value": 1593257.0,
-      "score": 57.0,
-      "trend": "rising",
-      "trend_label": "升温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV1gi1FzmEuf",
-      "title": "【两小时纯享】荧从提瓦特最南端一路跑到最北端",
-      "url": "https://www.bilibili.com/video/BV1gi1FzmEuf",
-      "rank": 10,
-      "hot_value": 1364940.0,
-      "score": 56.79,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "entertainment",
-      "category_label": "娱乐",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "mvanhorn/last30days-skill",
-      "title": "mvanhorn/last30days-skill",
-      "url": "https://github.com/mvanhorn/last30days-skill",
-      "rank": 10,
-      "hot_value": 675.0,
-      "score": 55.98,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -2329,6 +2669,40 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "mvanhorn/last30days-skill",
+      "title": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "rank": 10,
+      "hot_value": 519.0,
+      "score": 55.47,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV17dy2z4E5f",
+      "title": "大肥鱼你真的是串麻了",
+      "url": "https://www.bilibili.com/video/BV17dy2z4E5f",
+      "rank": 11,
+      "hot_value": 1353001.0,
+      "score": 55.23,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "douyin",
       "platform_label": "抖音",
       "platform_short": "抖音",
@@ -2344,6 +2718,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T18:59:02Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2020866489717139044",
+      "title": "中国一旦解决EUV光刻机技术，高端芯片能实现白菜价吗？",
+      "url": "https://www.zhihu.com/question/2020866489717139044",
+      "rank": 10,
+      "hot_value": 1490000.0,
+      "score": 54.67,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -2367,6 +2758,23 @@
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
+      "external_id": "2769354",
+      "title": "张杰武汉演唱会",
+      "url": "https://www.douyin.com/search/%E5%BC%A0%E6%9D%B0%E6%AD%A6%E6%B1%89%E6%BC%94%E5%94%B1%E4%BC%9A",
+      "rank": 18,
+      "hot_value": 7788261.0,
+      "score": 54.34,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
       "external_id": "2767460",
       "title": "想当切块大师手快的人先来",
       "url": "https://www.douyin.com/search/%E6%83%B3%E5%BD%93%E5%88%87%E5%9D%97%E5%A4%A7%E5%B8%88%E6%89%8B%E5%BF%AB%E7%9A%84%E4%BA%BA%E5%85%88%E6%9D%A5",
@@ -2378,6 +2786,40 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:06Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1CV1szzEWt",
+      "title": "在B站就能玩到的搜打撤游戏，点击即玩！【B站AI创造公开赛】",
+      "url": "https://www.bilibili.com/video/BV1CV1szzEWt",
+      "rank": 12,
+      "hot_value": 518740.0,
+      "score": 54.13,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370324",
+      "title": "知名UP主瓶子君官宣结婚",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370324&topic_name=%E7%9F%A5%E5%90%8DUP%E4%B8%BB%E7%93%B6%E5%AD%90%E5%90%9B%E5%AE%98%E5%AE%A3%E7%BB%93%E5%A9%9A",
+      "rank": 10,
+      "hot_value": 680988.0,
+      "score": 53.69,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "zhihu",
@@ -2431,23 +2873,6 @@
       "observed_at": "2026-11-27T06:17:07Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370323",
-      "title": "Ming复出老RNG再聚首",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370323&topic_name=Ming%E5%A4%8D%E5%87%BA%E8%80%81RNG%E5%86%8D%E8%81%9A%E9%A6%96",
-      "rank": 11,
-      "hot_value": 663100.0,
-      "score": 52.46,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
       "platform": "bilibili",
       "platform_label": "Bilibili",
       "platform_short": "B站",
@@ -2465,6 +2890,23 @@
       "observed_at": "2026-11-28T03:19:26Z"
     },
     {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370343",
+      "title": "国考漏报名被老父提刀家暴",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370343&topic_name=%E5%9B%BD%E8%80%83%E6%BC%8F%E6%8A%A5%E5%90%8D%E8%A2%AB%E8%80%81%E7%88%B6%E6%8F%90%E5%88%80%E5%AE%B6%E6%9A%B4",
+      "rank": 11,
+      "hot_value": 477980.0,
+      "score": 52.1,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -2480,23 +2922,6 @@
       "category": "tech",
       "category_label": "科技",
       "observed_at": "2026-11-28T03:19:24Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370333",
-      "title": "原广电总局局长被开除党籍",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370333&topic_name=%E5%8E%9F%E5%B9%BF%E7%94%B5%E6%80%BB%E5%B1%80%E5%B1%80%E9%95%BF%E8%A2%AB%E5%BC%80%E9%99%A4%E5%85%9A%E7%B1%8D",
-      "rank": 12,
-      "hot_value": 647919.0,
-      "score": 51.92,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "society",
-      "category_label": "社会",
-      "observed_at": "2026-11-28T03:19:25Z"
     },
     {
       "platform": "douyin",
@@ -2537,6 +2962,40 @@
       "platform_label": "抖音",
       "platform_short": "抖音",
       "platform_color": "#fe2c55",
+      "external_id": "2769137",
+      "title": "我担的KissMySoul甜到我心里了",
+      "url": "https://www.douyin.com/search/%E6%88%91%E6%8B%85%E7%9A%84KissMySoul%E7%94%9C%E5%88%B0%E6%88%91%E5%BF%83%E9%87%8C%E4%BA%86",
+      "rank": 19,
+      "hot_value": 7783166.0,
+      "score": 50.57,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "mjmirza/app-store-compliance",
+      "title": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "rank": 12,
+      "hot_value": 907.0,
+      "score": 50.45,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
       "external_id": "2767819",
       "title": "严肃进入舒服过冬模式",
       "url": "https://www.douyin.com/search/%E4%B8%A5%E8%82%83%E8%BF%9B%E5%85%A5%E8%88%92%E6%9C%8D%E8%BF%87%E5%86%AC%E6%A8%A1%E5%BC%8F",
@@ -2550,21 +3009,55 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV17dy2z4E5f",
-      "title": "大肥鱼你真的是串麻了",
-      "url": "https://www.bilibili.com/video/BV17dy2z4E5f",
-      "rank": 13,
-      "hot_value": 1097686.0,
-      "score": 49.68,
-      "trend": "rising",
-      "trend_label": "升温",
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370365",
+      "title": "吧友反问AI是否懂人味",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370365&topic_name=%E5%90%A7%E5%8F%8B%E5%8F%8D%E9%97%AEAI%E6%98%AF%E5%90%A6%E6%87%82%E4%BA%BA%E5%91%B3",
+      "rank": 12,
+      "hot_value": 437532.0,
+      "score": 49.92,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2769759",
+      "title": "王嘉尔重庆演唱会",
+      "url": "https://www.douyin.com/search/%E7%8E%8B%E5%98%89%E5%B0%94%E9%87%8D%E5%BA%86%E6%BC%94%E5%94%B1%E4%BC%9A",
+      "rank": 20,
+      "hot_value": 7775227.0,
+      "score": 49.83,
+      "trend": "new",
+      "trend_label": "新上榜",
       "category": "entertainment",
       "category_label": "娱乐",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "google-labs-code/stitch-skills",
+      "title": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "rank": 11,
+      "hot_value": 293.0,
+      "score": 49.43,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -2584,21 +3077,38 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "google-labs-code/stitch-skills",
-      "title": "google-labs-code/stitch-skills",
-      "url": "https://github.com/google-labs-code/stitch-skills",
-      "rank": 11,
-      "hot_value": 311.0,
-      "score": 49.17,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1qQykzCEwK",
+      "title": "《爱的缄默法则》首曝PV丨归来",
+      "url": "https://www.bilibili.com/video/BV1qQykzCEwK",
+      "rank": 16,
+      "hot_value": 2285048.0,
+      "score": 48.94,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "gaming",
+      "category_label": "游戏",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV119yCzcEBd",
+      "title": "我把Steam复刻搬进了B站游玩Toy【点击即玩】ToyToy【B站AI创造公开赛】",
+      "url": "https://www.bilibili.com/video/BV119yCzcEBd",
+      "rank": 13,
+      "hot_value": 1343138.0,
+      "score": 48.71,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "douyin",
@@ -2635,21 +3145,21 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "mjmirza/app-store-compliance",
-      "title": "mjmirza/app-store-compliance",
-      "url": "https://github.com/mjmirza/app-store-compliance",
-      "rank": 12,
-      "hot_value": 530.0,
-      "score": 47.66,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "platform": "douyin",
+      "platform_label": "抖音",
+      "platform_short": "抖音",
+      "platform_color": "#fe2c55",
+      "external_id": "2770102",
+      "title": "黄轩金晨熟男熟女张力拉满",
+      "url": "https://www.douyin.com/search/%E9%BB%84%E8%BD%A9%E9%87%91%E6%99%A8%E7%86%9F%E7%94%B7%E7%86%9F%E5%A5%B3%E5%BC%A0%E5%8A%9B%E6%8B%89%E6%BB%A1",
+      "rank": 21,
+      "hot_value": 7771298.0,
+      "score": 48.07,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "bilibili",
@@ -2737,23 +3247,6 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370241",
-      "title": "业内疯传JKL加入BLG",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370241&topic_name=%E4%B8%9A%E5%86%85%E7%96%AF%E4%BC%A0JKL%E5%8A%A0%E5%85%A5BLG",
-      "rank": 13,
-      "hot_value": 600462.0,
-      "score": 45.65,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "entertainment",
-      "category_label": "娱乐",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
       "platform": "bilibili",
       "platform_label": "Bilibili",
       "platform_short": "B站",
@@ -2771,6 +3264,23 @@
       "observed_at": "2026-11-28T03:19:26Z"
     },
     {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1gi1FzmEuf",
+      "title": "【两小时纯享】荧从提瓦特最南端一路跑到最北端",
+      "url": "https://www.bilibili.com/video/BV1gi1FzmEuf",
+      "rank": 14,
+      "hot_value": 1476362.0,
+      "score": 45.32,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "douyin",
       "platform_label": "抖音",
       "platform_short": "抖音",
@@ -2786,6 +3296,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-28T03:19:25Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370323",
+      "title": "Ming复出老RNG再聚首",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370323&topic_name=Ming%E5%A4%8D%E5%87%BA%E8%80%81RNG%E5%86%8D%E8%81%9A%E9%A6%96",
+      "rank": 13,
+      "hot_value": 366642.0,
+      "score": 44.71,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "douyin",
@@ -2839,21 +3366,72 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "Tracer-Cloud/opensre",
-      "title": "Tracer-Cloud/opensre",
-      "url": "https://github.com/Tracer-Cloud/opensre",
-      "rank": 13,
-      "hot_value": 328.0,
-      "score": 42.05,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2108483365758300171",
+      "title": "博士夫妻养出常年倒数第一儿子，父亲放下成绩执念支持孩子发展兴趣，这种思路值得参考吗？",
+      "url": "https://www.zhihu.com/question/2108483365758300171",
+      "rank": 14,
+      "hot_value": 1320000.0,
+      "score": 43.49,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "education",
+      "category_label": "教育",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370333",
+      "title": "原广电总局局长被开除党籍",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370333&topic_name=%E5%8E%9F%E5%B9%BF%E7%94%B5%E6%80%BB%E5%B1%80%E5%B1%80%E9%95%BF%E8%A2%AB%E5%BC%80%E9%99%A4%E5%85%9A%E7%B1%8D",
+      "rank": 14,
+      "hot_value": 333880.0,
+      "score": 43.42,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "society",
+      "category_label": "社会",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1wXyUzME25",
+      "title": "考研政治一页纸（3小时速成选择40+）",
+      "url": "https://www.bilibili.com/video/BV1wXyUzME25",
+      "rank": 15,
+      "hot_value": 669284.0,
+      "score": 42.64,
+      "trend": "rising",
+      "trend_label": "升温",
+      "category": "politics",
+      "category_label": "时政",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1om1Wz4E7C",
+      "title": "东北话魔仙",
+      "url": "https://www.bilibili.com/video/BV1om1Wz4E7C",
+      "rank": 17,
+      "hot_value": 2512408.0,
+      "score": 42.36,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -2873,6 +3451,23 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "Tracer-Cloud/opensre",
+      "title": "Tracer-Cloud/opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "rank": 13,
+      "hot_value": 270.0,
+      "score": 41.76,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -2890,38 +3485,38 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370238",
-      "title": "Zeus重返T1签约三年",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370238&topic_name=Zeus%E9%87%8D%E8%BF%94T1%E7%AD%BE%E7%BA%A6%E4%B8%89%E5%B9%B4",
-      "rank": 14,
-      "hot_value": 468350.0,
-      "score": 41.61,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109562275988255187",
+      "title": "如何看待BBC援引据称俄统计局泄露数据估算俄军死亡超49万，克宫回应只有俄国防部有权公布损失数据？",
+      "url": "https://www.zhihu.com/question/2109562275988255187",
+      "rank": 16,
+      "hot_value": 1140000.0,
+      "score": 41.66,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
       "platform_color": "#056de8",
-      "external_id": "2020866489717139044",
-      "title": "中国一旦解决EUV光刻机技术，高端芯片能实现白菜价吗？",
-      "url": "https://www.zhihu.com/question/2020866489717139044",
+      "external_id": "2108859777627448242",
+      "title": "南开大学几代学者攒 80 年藏 120 万只「臭大姐」标本，研究这类昆虫有哪些实际价值？",
+      "url": "https://www.zhihu.com/question/2108859777627448242",
       "rank": 15,
-      "hot_value": 920000.0,
-      "score": 41.31,
+      "hot_value": 1200000.0,
+      "score": 41.07,
       "trend": "new",
       "trend_label": "新上榜",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:24Z"
+      "category": "education",
+      "category_label": "教育",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -2941,23 +3536,6 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV1wXyUzME25",
-      "title": "考研政治一页纸（3小时速成选择40+）",
-      "url": "https://www.bilibili.com/video/BV1wXyUzME25",
-      "rank": 16,
-      "hot_value": 554474.0,
-      "score": 40.19,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "politics",
-      "category_label": "时政",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
       "platform": "github",
       "platform_label": "GitHub",
       "platform_short": "GitHub",
@@ -2966,13 +3544,30 @@
       "title": "toeverything/AFFiNE",
       "url": "https://github.com/toeverything/AFFiNE",
       "rank": 14,
-      "hot_value": 474.0,
-      "score": 39.88,
+      "hot_value": 495.0,
+      "score": 40.61,
       "trend": "steady",
       "trend_label": "持平",
       "category": "other",
       "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
+      "external_id": "BV1wv1WziEtR",
+      "title": "一块很宽很宽很宽很宽的人......",
+      "url": "https://www.bilibili.com/video/BV1wv1WziEtR",
+      "rank": 18,
+      "hot_value": 3135023.0,
+      "score": 40.37,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "bilibili",
@@ -2990,23 +3585,6 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:07Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370242",
-      "title": "GTA6放错误国旗惹争议",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370242&topic_name=GTA6%E6%94%BE%E9%94%99%E8%AF%AF%E5%9B%BD%E6%97%97%E6%83%B9%E4%BA%89%E8%AE%AE",
-      "rank": 15,
-      "hot_value": 375936.0,
-      "score": 39.71,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "gaming",
-      "category_label": "游戏",
-      "observed_at": "2026-11-28T03:19:25Z"
     },
     {
       "platform": "zhihu",
@@ -3034,13 +3612,30 @@
       "title": "XiaoYouChR/Ghost-Downloader-3",
       "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
       "rank": 15,
-      "hot_value": 836.0,
-      "score": 38.51,
+      "hot_value": 664.0,
+      "score": 38.16,
       "trend": "steady",
       "trend_label": "持平",
       "category": "tech",
       "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370241",
+      "title": "业内疯传JKL加入BLG",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370241&topic_name=%E4%B8%9A%E5%86%85%E7%96%AF%E4%BC%A0JKL%E5%8A%A0%E5%85%A5BLG",
+      "rank": 15,
+      "hot_value": 283648.0,
+      "score": 38.04,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "entertainment",
+      "category_label": "娱乐",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "bilibili",
@@ -3058,23 +3653,6 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370246",
-      "title": "3千万字设定文档污染DS",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370246&topic_name=3%E5%8D%83%E4%B8%87%E5%AD%97%E8%AE%BE%E5%AE%9A%E6%96%87%E6%A1%A3%E6%B1%A1%E6%9F%93DS",
-      "rank": 16,
-      "hot_value": 298275.0,
-      "score": 36.85,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:25Z"
     },
     {
       "platform": "zhihu",
@@ -3109,6 +3687,23 @@
       "category": "tech",
       "category_label": "科技",
       "observed_at": "2026-11-28T03:19:26Z"
+    },
+    {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109080119901938864",
+      "title": "极客湾预估 PC 版《GTA6》2K60 帧整机预算约 1.4 万元，你会为玩这款游戏升级整机吗？",
+      "url": "https://www.zhihu.com/question/2109080119901938864",
+      "rank": 17,
+      "hot_value": 1080000.0,
+      "score": 35.75,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -3179,21 +3774,21 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "github",
-      "platform_label": "GitHub",
-      "platform_short": "GitHub",
-      "platform_color": "#8b5cf6",
-      "external_id": "zhouxiaoka/autoclip",
-      "title": "zhouxiaoka/autoclip",
-      "url": "https://github.com/zhouxiaoka/autoclip",
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370238",
+      "title": "Zeus重返T1签约三年",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370238&topic_name=Zeus%E9%87%8D%E8%BF%94T1%E7%AD%BE%E7%BA%A6%E4%B8%89%E5%B9%B4",
       "rank": 16,
-      "hot_value": 718.0,
-      "score": 34.23,
-      "trend": "steady",
-      "trend_label": "持平",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "hot_value": 206505.0,
+      "score": 34.17,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "zhihu",
@@ -3217,6 +3812,23 @@
       "platform_label": "Bilibili",
       "platform_short": "B站",
       "platform_color": "#00a1d6",
+      "external_id": "BV1vKyBzZEsL",
+      "title": "DECO*27 - Gesture feat. 初音未来",
+      "url": "https://www.bilibili.com/video/BV1vKyBzZEsL",
+      "rank": 19,
+      "hot_value": 426958.0,
+      "score": 33.67,
+      "trend": "new",
+      "trend_label": "新上榜",
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
+      "platform": "bilibili",
+      "platform_label": "Bilibili",
+      "platform_short": "B站",
+      "platform_color": "#00a1d6",
       "external_id": "BV1noyDzGEDa",
       "title": "超级超级超级抱歉，梦想家们！",
       "url": "https://www.bilibili.com/video/BV1noyDzGEDa",
@@ -3230,21 +3842,21 @@
       "observed_at": "2026-11-27T06:17:07Z"
     },
     {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370240",
-      "title": "美国关税大棒又挥向中国",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370240&topic_name=%E7%BE%8E%E5%9B%BD%E5%85%B3%E7%A8%8E%E5%A4%A7%E6%A3%92%E5%8F%88%E6%8C%A5%E5%90%91%E4%B8%AD%E5%9B%BD",
-      "rank": 17,
-      "hot_value": 272846.0,
-      "score": 33.0,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "finance",
-      "category_label": "财经",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "platform": "github",
+      "platform_label": "GitHub",
+      "platform_short": "GitHub",
+      "platform_color": "#8b5cf6",
+      "external_id": "zhouxiaoka/autoclip",
+      "title": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "rank": 16,
+      "hot_value": 517.0,
+      "score": 33.45,
+      "trend": "steady",
+      "trend_label": "持平",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "zhihu",
@@ -3264,6 +3876,23 @@
       "observed_at": "2026-11-27T06:17:06Z"
     },
     {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370242",
+      "title": "GTA6放错误国旗惹争议",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370242&topic_name=GTA6%E6%94%BE%E9%94%99%E8%AF%AF%E5%9B%BD%E6%97%97%E6%83%B9%E4%BA%89%E8%AE%AE",
+      "rank": 17,
+      "hot_value": 165956.0,
+      "score": 31.94,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "gaming",
+      "category_label": "游戏",
+      "observed_at": "2026-11-28T15:31:49Z"
+    },
+    {
       "platform": "zhihu",
       "platform_label": "知乎",
       "platform_short": "知乎",
@@ -3281,21 +3910,21 @@
       "observed_at": "2026-11-27T18:59:02Z"
     },
     {
-      "platform": "bilibili",
-      "platform_label": "Bilibili",
-      "platform_short": "B站",
-      "platform_color": "#00a1d6",
-      "external_id": "BV119yCzcEBd",
-      "title": "我把Steam复刻搬进了B站游玩Toy【点击即玩】ToyToy【B站AI创造公开赛】",
-      "url": "https://www.bilibili.com/video/BV119yCzcEBd",
-      "rank": 19,
-      "hot_value": 1046648.0,
-      "score": 31.21,
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2093952565603987997",
+      "title": "泡利不相容原理最底层本质是什么？",
+      "url": "https://www.zhihu.com/question/2093952565603987997",
+      "rank": 18,
+      "hot_value": 1060000.0,
+      "score": 30.9,
       "trend": "new",
       "trend_label": "新上榜",
-      "category": "tech",
-      "category_label": "科技",
-      "observed_at": "2026-11-28T03:19:26Z"
+      "category": "other",
+      "category_label": "其他",
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "bilibili",
@@ -3315,6 +3944,23 @@
       "observed_at": "2026-11-27T18:59:03Z"
     },
     {
+      "platform": "zhihu",
+      "platform_label": "知乎",
+      "platform_short": "知乎",
+      "platform_color": "#056de8",
+      "external_id": "2109242936701478494",
+      "title": "模特七海发博表示 「我的脸已经成 AI 短剧里的赛博恶役」，AI 融脸为什么维权难？",
+      "url": "https://www.zhihu.com/question/2109242936701478494",
+      "rank": 19,
+      "hot_value": 790000.0,
+      "score": 30.1,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:50Z"
+    },
+    {
       "platform": "bilibili",
       "platform_label": "Bilibili",
       "platform_short": "B站",
@@ -3323,30 +3969,13 @@
       "title": "特朗普与民主党抽象乱斗",
       "url": "https://www.bilibili.com/video/BV1xzy2zMExY",
       "rank": 20,
-      "hot_value": 1950963.0,
-      "score": 30.5,
-      "trend": "new",
-      "trend_label": "新上榜",
+      "hot_value": 2136877.0,
+      "score": 30.05,
+      "trend": "steady",
+      "trend_label": "持平",
       "category": "politics",
       "category_label": "时政",
-      "observed_at": "2026-11-28T03:19:26Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370239",
-      "title": "吧友自制GTA6互动地图",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370239&topic_name=%E5%90%A7%E5%8F%8B%E8%87%AA%E5%88%B6GTA6%E4%BA%92%E5%8A%A8%E5%9C%B0%E5%9B%BE",
-      "rank": 18,
-      "hot_value": 264914.0,
-      "score": 30.26,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "gaming",
-      "category_label": "游戏",
-      "observed_at": "2026-11-28T03:19:25Z"
+      "observed_at": "2026-11-28T15:31:50Z"
     },
     {
       "platform": "tieba",
@@ -3364,6 +3993,23 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T18:59:04Z"
+    },
+    {
+      "platform": "tieba",
+      "platform_label": "贴吧",
+      "platform_short": "贴吧",
+      "platform_color": "#4e6ef2",
+      "external_id": "28370246",
+      "title": "3千万字设定文档污染DS",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370246&topic_name=3%E5%8D%83%E4%B8%87%E5%AD%97%E8%AE%BE%E5%AE%9A%E6%96%87%E6%A1%A3%E6%B1%A1%E6%9F%93DS",
+      "rank": 18,
+      "hot_value": 118443.0,
+      "score": 28.84,
+      "trend": "falling",
+      "trend_label": "降温",
+      "category": "tech",
+      "category_label": "科技",
+      "observed_at": "2026-11-28T15:31:49Z"
     },
     {
       "platform": "bilibili",
@@ -3398,130 +4044,27 @@
       "category": "other",
       "category_label": "其他",
       "observed_at": "2026-11-27T06:17:07Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370200",
-      "title": "超级厄尔尼诺发威暴雪袭击日本",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370200&topic_name=%E8%B6%85%E7%BA%A7%E5%8E%84%E5%B0%94%E5%B0%BC%E8%AF%BA%E5%8F%91%E5%A8%81%E6%9A%B4%E9%9B%AA%E8%A2%AD%E5%87%BB%E6%97%A5%E6%9C%AC",
-      "rank": 19,
-      "hot_value": 151548.0,
-      "score": 25.9,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-27T18:59:04Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370170",
-      "title": "抗吧整活BLG受封大典",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370170&topic_name=%E6%8A%97%E5%90%A7%E6%95%B4%E6%B4%BBBLG%E5%8F%97%E5%B0%81%E5%A4%A7%E5%85%B8",
-      "rank": 19,
-      "hot_value": 224616.0,
-      "score": 25.89,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
-      "platform": "zhihu",
-      "platform_label": "知乎",
-      "platform_short": "知乎",
-      "platform_color": "#056de8",
-      "external_id": "2037220265193640512",
-      "title": "睡虎地秦简中记录了大量基层小吏的日常工作，先秦普通官吏的一天，到底和我们想象中有多大差距？",
-      "url": "https://www.zhihu.com/question/2037220265193640512",
-      "rank": 20,
-      "hot_value": 870000.0,
-      "score": 25.78,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-27T06:17:06Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370186",
-      "title": "S16奖金排名公布BLG位居榜首",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370186&topic_name=S16%E5%A5%96%E9%87%91%E6%8E%92%E5%90%8D%E5%85%AC%E5%B8%83BLG%E4%BD%8D%E5%B1%85%E6%A6%9C%E9%A6%96",
-      "rank": 19,
-      "hot_value": 84832.0,
-      "score": 25.03,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-27T06:17:07Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370210",
-      "title": "ON暗示ELK回归BLG",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370210&topic_name=ON%E6%9A%97%E7%A4%BAELK%E5%9B%9E%E5%BD%92BLG",
-      "rank": 20,
-      "hot_value": 203357.0,
-      "score": 23.89,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-28T03:19:25Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370172",
-      "title": "黄金矿工爆火GTA6危险了",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370172&topic_name=%E9%BB%84%E9%87%91%E7%9F%BF%E5%B7%A5%E7%88%86%E7%81%ABGTA6%E5%8D%B1%E9%99%A9%E4%BA%86",
-      "rank": 20,
-      "hot_value": 140998.0,
-      "score": 22.81,
-      "trend": "falling",
-      "trend_label": "降温",
-      "category": "other",
-      "category_label": "其他",
-      "observed_at": "2026-11-27T18:59:04Z"
-    },
-    {
-      "platform": "tieba",
-      "platform_label": "贴吧",
-      "platform_short": "贴吧",
-      "platform_color": "#4e6ef2",
-      "external_id": "28370171",
-      "title": "曝TheShy入选LOL名人堂",
-      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28370171&topic_name=%E6%9B%9DTheShy%E5%85%A5%E9%80%89LOL%E5%90%8D%E4%BA%BA%E5%A0%82",
-      "rank": 20,
-      "hot_value": 81570.0,
-      "score": 22.12,
-      "trend": "new",
-      "trend_label": "新上榜",
-      "category": "gaming",
-      "category_label": "游戏",
-      "observed_at": "2026-11-27T06:17:07Z"
     }
   ],
   "keywords": [
     {
       "term": "看待",
+      "count": 14,
+      "platforms": [
+        "zhihu"
+      ],
+      "score": 15.4
+    },
+    {
+      "term": "如何看待",
+      "count": 10,
+      "platforms": [
+        "zhihu"
+      ],
+      "score": 12.0
+    },
+    {
+      "term": "哪些",
       "count": 9,
       "platforms": [
         "zhihu"
@@ -3529,15 +4072,34 @@
       "score": 9.9
     },
     {
-      "term": "如何看待",
-      "count": 7,
+      "term": "第一",
+      "count": 5,
       "platforms": [
+        "bilibili",
+        "douyin",
         "zhihu"
       ],
-      "score": 8.4
+      "score": 9.35
     },
     {
       "term": "为什",
+      "count": 8,
+      "platforms": [
+        "zhihu"
+      ],
+      "score": 8.8
+    },
+    {
+      "term": "航天员",
+      "count": 5,
+      "platforms": [
+        "douyin",
+        "zhihu"
+      ],
+      "score": 7.762
+    },
+    {
+      "term": "员工",
       "count": 7,
       "platforms": [
         "zhihu"
@@ -3545,20 +4107,10 @@
       "score": 7.7
     },
     {
-      "term": "第一",
-      "count": 4,
-      "platforms": [
-        "bilibili",
-        "douyin",
-        "zhihu"
-      ],
-      "score": 7.48
-    },
-    {
-      "term": "工作",
+      "term": "影响",
       "count": 5,
       "platforms": [
-        "douyin",
+        "tieba",
         "zhihu"
       ],
       "score": 7.425
@@ -3572,10 +4124,37 @@
       "score": 7.2
     },
     {
+      "term": "是什么",
+      "count": 4,
+      "platforms": [
+        "bilibili",
+        "zhihu"
+      ],
+      "score": 6.21
+    },
+    {
       "term": "作人",
       "count": 4,
       "platforms": [
         "bilibili",
+        "zhihu"
+      ],
+      "score": 5.94
+    },
+    {
+      "term": "十五",
+      "count": 4,
+      "platforms": [
+        "douyin",
+        "zhihu"
+      ],
+      "score": 5.94
+    },
+    {
+      "term": "发展",
+      "count": 4,
+      "platforms": [
+        "douyin",
         "zhihu"
       ],
       "score": 5.94
@@ -3590,6 +4169,52 @@
       "score": 5.94
     },
     {
+      "term": "工作",
+      "count": 4,
+      "platforms": [
+        "douyin",
+        "zhihu"
+      ],
+      "score": 5.94
+    },
+    {
+      "term": "选择",
+      "count": 4,
+      "platforms": [
+        "bilibili",
+        "zhihu"
+      ],
+      "score": 5.94
+    },
+    {
+      "term": "有哪些",
+      "count": 5,
+      "platforms": [
+        "zhihu"
+      ],
+      "score": 5.75
+    },
+    {
+      "term": "一年",
+      "count": 3,
+      "platforms": [
+        "bilibili",
+        "douyin",
+        "zhihu"
+      ],
+      "score": 5.61
+    },
+    {
+      "term": "展示",
+      "count": 3,
+      "platforms": [
+        "bilibili",
+        "douyin",
+        "zhihu"
+      ],
+      "score": 5.61
+    },
+    {
       "term": "手机",
       "count": 3,
       "platforms": [
@@ -3598,103 +4223,70 @@
         "zhihu"
       ],
       "score": 5.61
-    },
-    {
-      "term": "为何",
-      "count": 5,
-      "platforms": [
-        "zhihu"
-      ],
-      "score": 5.5
-    },
-    {
-      "term": "员工",
-      "count": 5,
-      "platforms": [
-        "zhihu"
-      ],
-      "score": 5.5
-    },
-    {
-      "term": "哪些",
-      "count": 5,
-      "platforms": [
-        "zhihu"
-      ],
-      "score": 5.5
-    },
-    {
-      "term": "gta6",
-      "count": 4,
-      "platforms": [
-        "tieba"
-      ],
-      "score": 4.8
-    },
-    {
-      "term": "航天员",
-      "count": 3,
-      "platforms": [
-        "douyin",
-        "zhihu"
-      ],
-      "score": 4.658
-    },
-    {
-      "term": "blg",
-      "count": 4,
-      "platforms": [
-        "tieba"
-      ],
-      "score": 4.6
-    },
-    {
-      "term": "u17",
-      "count": 4,
-      "platforms": [
-        "douyin"
-      ],
-      "score": 4.6
-    },
-    {
-      "term": "十五",
-      "count": 3,
-      "platforms": [
-        "douyin",
-        "zhihu"
-      ],
-      "score": 4.455
-    },
-    {
-      "term": "官宣",
-      "count": 3,
-      "platforms": [
-        "douyin",
-        "tieba"
-      ],
-      "score": 4.455
-    },
-    {
-      "term": "小时",
-      "count": 3,
-      "platforms": [
-        "bilibili",
-        "zhihu"
-      ],
-      "score": 4.455
-    },
-    {
-      "term": "影响",
-      "count": 3,
-      "platforms": [
-        "tieba",
-        "zhihu"
-      ],
-      "score": 4.455
     }
   ],
   "clusters": [],
   "recent_runs": [
+    {
+      "id": 24,
+      "platform": "github",
+      "status": "success",
+      "item_count": 16,
+      "duration_ms": 1466,
+      "started_at": "2026-11-28T15:31:49Z",
+      "finished_at": "2026-11-28T15:31:50Z",
+      "source": "trending-daily"
+    },
+    {
+      "id": 23,
+      "platform": "reddit",
+      "status": "failed",
+      "item_count": 0,
+      "duration_ms": 236,
+      "started_at": "2026-11-28T15:31:49Z",
+      "finished_at": "2026-11-28T15:31:49Z",
+      "source": null
+    },
+    {
+      "id": 22,
+      "platform": "tieba",
+      "status": "success",
+      "item_count": 20,
+      "duration_ms": 1132,
+      "started_at": "2026-11-28T15:31:48Z",
+      "finished_at": "2026-11-28T15:31:49Z",
+      "source": "topicList"
+    },
+    {
+      "id": 21,
+      "platform": "douyin",
+      "status": "success",
+      "item_count": 20,
+      "duration_ms": 1052,
+      "started_at": "2026-11-28T15:31:48Z",
+      "finished_at": "2026-11-28T15:31:49Z",
+      "source": "hot-search"
+    },
+    {
+      "id": 20,
+      "platform": "zhihu",
+      "status": "success",
+      "item_count": 20,
+      "duration_ms": 2454,
+      "started_at": "2026-11-28T15:31:48Z",
+      "finished_at": "2026-11-28T15:31:50Z",
+      "source": "hot-list"
+    },
+    {
+      "id": 19,
+      "platform": "bilibili",
+      "status": "success",
+      "item_count": 20,
+      "duration_ms": 2263,
+      "started_at": "2026-11-28T15:31:48Z",
+      "finished_at": "2026-11-28T15:31:50Z",
+      "source": "ranking"
+    },
     {
       "id": 18,
       "platform": "github",
@@ -3753,66 +4345,6 @@
       "duration_ms": 1912,
       "started_at": "2026-11-28T03:19:24Z",
       "finished_at": "2026-11-28T03:19:26Z",
-      "source": "ranking"
-    },
-    {
-      "id": 12,
-      "platform": "github",
-      "status": "success",
-      "item_count": 16,
-      "duration_ms": 8229,
-      "started_at": "2026-11-27T18:59:02Z",
-      "finished_at": "2026-11-27T18:59:10Z",
-      "source": "trending-daily"
-    },
-    {
-      "id": 11,
-      "platform": "reddit",
-      "status": "failed",
-      "item_count": 0,
-      "duration_ms": 263,
-      "started_at": "2026-11-27T18:59:02Z",
-      "finished_at": "2026-11-27T18:59:02Z",
-      "source": null
-    },
-    {
-      "id": 10,
-      "platform": "tieba",
-      "status": "success",
-      "item_count": 20,
-      "duration_ms": 3318,
-      "started_at": "2026-11-27T18:59:01Z",
-      "finished_at": "2026-11-27T18:59:04Z",
-      "source": "topicList"
-    },
-    {
-      "id": 9,
-      "platform": "douyin",
-      "status": "success",
-      "item_count": 20,
-      "duration_ms": 1114,
-      "started_at": "2026-11-27T18:59:01Z",
-      "finished_at": "2026-11-27T18:59:02Z",
-      "source": "hot-search"
-    },
-    {
-      "id": 8,
-      "platform": "zhihu",
-      "status": "success",
-      "item_count": 20,
-      "duration_ms": 1053,
-      "started_at": "2026-11-27T18:59:01Z",
-      "finished_at": "2026-11-27T18:59:02Z",
-      "source": "hot-list"
-    },
-    {
-      "id": 7,
-      "platform": "bilibili",
-      "status": "success",
-      "item_count": 20,
-      "duration_ms": 1680,
-      "started_at": "2026-11-27T18:59:01Z",
-      "finished_at": "2026-11-27T18:59:03Z",
       "source": "ranking"
     }
   ],
