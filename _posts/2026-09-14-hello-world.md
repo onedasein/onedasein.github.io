@@ -1,4 +1,5 @@
---- title: 开张：这个博客是怎么搭起来的
+---
+title: 开张：这个博客是怎么搭起来的
 date: 2026-09-14 09:00:00 +0800
 categories: [随笔]
 tags: [jekyll, chirpy, github-pages]
